@@ -10,6 +10,6 @@ class Home extends BaseController
     }
     public function getValue()
     {
-        return "1";
+        return view('home_view/home.php');
     }
 }
