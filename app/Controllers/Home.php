@@ -8,8 +8,5 @@ class Home extends BaseController
     {
         return view('welcome_message');
     }
-    public function getValue()
-    {
-        return view('home_view/home.php');
-    }
+
 }

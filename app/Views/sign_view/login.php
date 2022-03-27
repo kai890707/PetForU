@@ -1,12 +1,13 @@
-<?= $this->extend('layout/home_layout') ?>
+<?= $this->extend('layout/sign_layout') ?>
 
 <?= $this->section('css') ?>
     <?= $this->include('base_view/css') ?>
 <?= $this->endSection() ?>
 <?= $this->section('main') ?>
     <?= $this->include('base_view/nav') ?>
-    <?= $this->include('home_view/main') ?>
+    <?= $this->include('sign_view/login_main') ?>
     <?= $this->include('base_view/footer') ?>
+    
 <?= $this->endSection() ?>
 <?= $this->section('js') ?>
     <?= $this->include('base_view/js') ?>
