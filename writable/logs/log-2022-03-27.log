@@ -615,3 +615,29 @@ CRITICAL - 2022-03-27 08:55:02 --> Invalid file: layout/home_layout.php
 #6 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
 #7 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
 #8 {main}
+CRITICAL - 2022-03-27 22:06:33 --> Invalid file: sign_view/find_main.php
+#0 C:\xampp\htdocs\petforyou\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('sign_view/find_...')
+#1 C:\xampp\htdocs\petforyou\system\View\View.php(424): CodeIgniter\View\View->render('sign_view/find_...', NULL, true)
+#2 C:\xampp\htdocs\petforyou\app\Views\find_view\find.php(8): CodeIgniter\View\View->include('sign_view/find_...')
+#3 C:\xampp\htdocs\petforyou\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\petforyou\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\xampp\htdocs\petforyou\system\Common.php(1089): CodeIgniter\View\View->render('find_view/find', Array, true)
+#6 C:\xampp\htdocs\petforyou\app\Controllers\View.php(33): view('find_view/find', Array)
+#7 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\View->find_view()
+#8 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+#9 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2022-03-27 22:44:17 --> Invalid file: find_view/style.php
+#0 C:\xampp\htdocs\petforyou\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('find_view/style...')
+#1 C:\xampp\htdocs\petforyou\system\View\View.php(424): CodeIgniter\View\View->render('find_view/style', NULL, true)
+#2 C:\xampp\htdocs\petforyou\app\Views\find_view\find.php(5): CodeIgniter\View\View->include('find_view/style')
+#3 C:\xampp\htdocs\petforyou\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\petforyou\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\xampp\htdocs\petforyou\system\Common.php(1089): CodeIgniter\View\View->render('find_view/find', Array, true)
+#6 C:\xampp\htdocs\petforyou\app\Controllers\View.php(33): view('find_view/find', Array)
+#7 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\View->find_view()
+#8 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+#9 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}

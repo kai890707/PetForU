@@ -25,5 +25,26 @@ class View extends BaseController
         ];
         echo view('sign_view/register', $data);
     }
+    public function find_view()
+    {
+        $data = [
+            'page_title' => '找浪浪',
+        ];
+        echo view('find_view/find', $data);
+    }
+    public function pet_view($id=null)
+    {
+        $data = [
+            'page_title' => '浪浪資訊',
+        ];
+        echo view('pet_view/pet', $data);
+    }
+    public function person_view()
+    {
+        $data = [
+            'page_title' => '個人資訊',
+        ];
+        echo view('member_view/member', $data);
+    }
  
 }

@@ -6,7 +6,7 @@
                         <div class="col-xl-3 col-lg-3">
                             <div class="logo">
                                 <a href="index.html">
-                                    <img src="assets/img/logo.png" alt="">
+                                    <img src="<?php echo base_url('public')?>/assets/img/logo.png" alt="">
                                 </a>
                             </div>
                         </div>
@@ -14,7 +14,7 @@
                             <div class="main-menu  d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a  href="home">首頁</a></li>
+                                        <li><a  href="<?php echo base_url('public/')?>">首頁</a></li>
                                         <li><a href="about.html">關於我們</a></li>
                                         <li><a href="#">blog <i class="ti-angle-down"></i></a>
                                             <ul class="submenu">
@@ -28,8 +28,9 @@
                                                 
                                             </ul>
                                         </li>
-                                        <li><a href="service.html">找浪浪</a></li>
-                                        <li><a href="login">登入</a></li>
+                                        <li><a href="<?php echo base_url('public')?>/find">找浪浪</a></li>
+                                        <li><a href="service.html">寵物媒合</a></li>
+                                        <li><a href="<?php echo base_url('public')?>/login">登入</a></li>
                                     </ul>
                                 </nav>
                             </div>

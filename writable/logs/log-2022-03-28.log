@@ -1,0 +1,13 @@
+CRITICAL - 2022-03-28 01:51:47 --> Invalid file: pet_view/person_main.php
+#0 C:\xampp\htdocs\petforyou\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('pet_view/person...')
+#1 C:\xampp\htdocs\petforyou\system\View\View.php(424): CodeIgniter\View\View->render('pet_view/person...', NULL, true)
+#2 C:\xampp\htdocs\petforyou\app\Views\member_view\person.php(9): CodeIgniter\View\View->include('pet_view/person...')
+#3 C:\xampp\htdocs\petforyou\system\View\View.php(210): include('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\petforyou\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\xampp\htdocs\petforyou\system\Common.php(1089): CodeIgniter\View\View->render('member_view/per...', Array, true)
+#6 C:\xampp\htdocs\petforyou\app\Controllers\View.php(47): view('member_view/per...', Array)
+#7 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\View->person_view()
+#8 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\View))
+#9 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 {main}

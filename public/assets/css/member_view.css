@@ -1,0 +1,64 @@
+/* 複寫bootstrap元素 */
+.active:focus{
+    color: #f44a40!important;
+    font-weight: 700!important;
+}
+body{
+    background-color: #f5f5f5!important;
+}
+.img-container {
+    text-align: center!important;
+    display: block!important;
+    justify-content: center!important;
+    align-items: center!important;
+    /* margin-left: auto;
+    margin-right: auto  */
+  }
+@media (max-width:1000px) {
+    .user_profile{
+        flex: 1!important;
+        display: flex!important;
+        flex-direction: column!important;
+        justify-content: center!important;
+        padding-left: 15px!important;
+        overflow: hidden!important;
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+.img-container > img{
+    height: 60px!important;
+    width: 60px!important;
+}
+.user_profile{
+    flex: 1!important;
+    display: flex!important;
+    flex-direction: column!important;
+    justify-content: center!important;
+    padding-left: 15px!important;
+    overflow: hidden!important;
+}
+.username{
+    overflow: hidden!important;
+    text-overflow: ellipsis!important;
+    white-space: nowrap!important;
+    min-height: 1rem!important;
+    font-weight: 600!important;
+    margin-bottom: 5px!important;;
+    color: #333!important;
+}
+.edit_userprofile{
+    color: #888!important;
+    text-transform: capitalize!important;
+    text-decoration: none!important;
+}
+.tab_profile{
+    border-bottom: 0.0625rem solid #efefef;
+}
+.exchange-btn{
+    border-radius: 20px!important;
+}
+.file {
+    visibility: hidden;
+    position: absolute;
+}
