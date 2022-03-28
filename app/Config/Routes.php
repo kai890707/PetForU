@@ -35,14 +35,11 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'View::index');
 $routes->get('/login', 'View::login_view');
 $routes->get('/register', 'View::register_view');
-<<<<<<< Updated upstream
 $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
 $routes->get('/person', 'View::person_view');
-=======
 
-$routes->get('/user', 'UserController::index');
->>>>>>> Stashed changes
+$routes->post('/loginTest', 'LoginController::Login');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

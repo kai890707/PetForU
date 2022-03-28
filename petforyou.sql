@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-03-26 18:21:44
+-- 產生時間： 2022-03-28 19:03:17
 -- 伺服器版本： 10.4.22-MariaDB
 -- PHP 版本： 7.4.28
 
@@ -20,6 +20,48 @@ SET time_zone = "+00:00";
 --
 -- 資料庫: `petforyou`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 資料表結構 `city`
+--
+
+CREATE TABLE `city` (
+  `city_id` int(11) NOT NULL,
+  `city_name` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `city`
+--
+
+INSERT INTO `city` (`city_id`, `city_name`) VALUES
+(1, '基隆市'),
+(2, '台北市'),
+(3, '新北市'),
+(4, '桃園縣'),
+(5, '桃園市'),
+(6, '新竹市'),
+(7, '新竹縣'),
+(8, '苗栗縣'),
+(9, '台中市'),
+(10, '彰化縣'),
+(11, '彰化市'),
+(12, '南投縣'),
+(13, '雲林縣'),
+(14, '嘉義市'),
+(15, '嘉義縣'),
+(16, '台南市'),
+(17, '高雄市'),
+(18, '屏東縣'),
+(19, '屏東市'),
+(20, '台東縣'),
+(21, '花蓮縣'),
+(22, '宜蘭縣'),
+(23, '澎湖縣'),
+(24, '金門縣'),
+(25, '連江縣');
 
 -- --------------------------------------------------------
 
@@ -95,15 +137,31 @@ CREATE TABLE `published` (
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `user_account` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_password` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_password` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_gender` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_phone` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_ photo` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
+  `user_photo` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- 傾印資料表的資料 `user`
+--
+
+INSERT INTO `user` (`user_id`, `user_account`, `user_password`, `user_name`, `user_gender`, `user_phone`, `user_photo`) VALUES
+(1, 'aa324917', 'asd26455', 'bbb', '男', '091234556', ''),
+(2, 'aaa', 'aaa', 'bbb', '女', '0912312312', 'asdasdasd'),
+(9, '123123', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', '', '');
 
 --
 -- 已傾印資料表的索引
 --
+
+--
+-- 資料表索引 `city`
+--
+ALTER TABLE `city`
+  ADD PRIMARY KEY (`city_id`);
 
 --
 -- 資料表索引 `collet`
@@ -128,6 +186,12 @@ ALTER TABLE `user`
 --
 
 --
+-- 使用資料表自動遞增(AUTO_INCREMENT) `city`
+--
+ALTER TABLE `city`
+  MODIFY `city_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+
+--
 -- 使用資料表自動遞增(AUTO_INCREMENT) `collet`
 --
 ALTER TABLE `collet`
@@ -143,7 +207,7 @@ ALTER TABLE `published`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
