@@ -32,8 +32,8 @@
                     </div>
                     <a class="edit_userprofile nav-link active" id="v-pills-profile-tab"style="background-color:rgba(0,0,0,0) !important;"  data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="true"><i class="ti-pencil-alt2 mr-2"></i>編輯個人簡介</a>
                     <a class="nav-link " id="v-pills-home-tab" style="background-color:rgba(0,0,0,0) !important;" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="false"><i class="ti-unlock mr-2"></i>修改密碼</a>
-                    <a class="nav-link" id="v-pills-messages-tab"style="background-color:rgba(0,0,0,0) !important;"  data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                    <a class="nav-link" id="v-pills-settings-tab" style="background-color:rgba(0,0,0,0) !important;" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                    <a class="nav-link" id="v-pills-messages-tab"style="background-color:rgba(0,0,0,0) !important;"  data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"><i class="fa fa-paw mr-2"></i>浪浪收藏</a>
+                    <a class="nav-link" id="v-pills-settings-tab" style="background-color:rgba(0,0,0,0) !important;" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"><i class="fa fa-folder mr-2"></i>個人刊登</a>
                 </div>
             </div>
             <div class="col-9 shdow-lg rounded bg-white">
@@ -47,11 +47,12 @@
                             
                                     <form>
                                         <div class="form-group row">
-                                            <label for="staticEmail" class="col-sm-2 col-form-label">使用者帳號</label>
+                                            <label for="staticEmail" class="col-sm-2 col-form-label">使用者名稱</label>
                                             <div class="col-sm-10">
-                                                <p class="p-1 m-0 d-flex align-items-center">example</p>
+                                                <p class="m-0 d-flex align-items-center">example</p>
                                             </div>
                                         </div>
+                                        
                                         <div class="form-group row">
                                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                                             <div class="col-sm-10">
@@ -114,7 +115,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                    <div class="p-4 tab_profile">
+                        <div class="p-4 tab_profile">
                             <h3 class="font-weight-bold">修改密碼</h3>
                             <small class="text-muted font-weight-bold">定期更改密碼可以有效保護你的帳戶</small>
                         </div>    
@@ -146,10 +147,50 @@
                             
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
-                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+                        <div class="p-4 tab_profile">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 class="font-weight-bold">個人刊登</h3>
+                                    <small class="text-muted font-weight-bold">管理你所刊登的寵物資訊</small>
+                                </div>
+                                <div class="col d-flex justify-content-end align-items-end">
+                                    <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModalCenter">立即刊登</button>
+                                    <!-- Modal -->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>    
+                        
+                        <div class="p-4 row">
+                            <!-- <div class="col-4"><button type="button" class="btn btn-outline-success">立即刊登</button></div>         -->
+                        </div>
+                    </div>
                 </div>
-                
+               
             </div>
         </div>
     </div>

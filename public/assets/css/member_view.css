@@ -62,3 +62,25 @@ body{
     visibility: hidden;
     position: absolute;
 }
+.pet_card{
+    cursor: pointer!important;
+}
+.pet_card_size{
+    height: 300px!important;
+    width: 250px!important;
+}
+.pet_card_fontsize{
+    font-weight: 600!important;
+    font-size: 22px!important;
+}
+.pet_card_icon{
+    width: 35px!important;
+    height: 35px!important;
+}
+.pet_card_h3_underline{
+    border-top: 3px solid #ffc5c2!important;
+    width: 60px!important;
+}
+.modal-backdrop {
+    z-index: 0;
+  }
