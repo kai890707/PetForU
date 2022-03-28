@@ -14,6 +14,7 @@
 </head>
 <body>
     <?= $this->renderSection('main') ?>
+    
     <?= $this->renderSection('js') ?>
     <?= $this->renderSection('custom_js') ?>
 </body>

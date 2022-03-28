@@ -25,6 +25,9 @@
                
                     <form id="register_form">
                         <div class="form-group">
+                            <input type="text" class="form-control form-control-lg" id="name" aria-describedby="emailHelp" placeholder="輸入您的名稱">
+                        </div>
+                        <div class="form-group">
                             <input type="email" class="form-control form-control-lg" id="account" aria-describedby="emailHelp" placeholder="輸入您將建立的帳號">
                         </div>
                         <div class="form-group">

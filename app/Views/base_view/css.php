@@ -14,4 +14,5 @@
     <link rel="stylesheet" href="<?php echo base_url('public')?>/assets/css/animate.css">
     <link rel="stylesheet" href="<?php echo base_url('public')?>/assets/css/slicknav.css">
     <link rel="stylesheet" href="<?php echo base_url('public')?>/assets/css/style.css">
+    <link rel="stylesheet" href="<?php echo base_url('public')?>/assets/css/font-awesome.css">
     <!-- <link rel="stylesheet" href="assets/css/responsive.css"> -->
