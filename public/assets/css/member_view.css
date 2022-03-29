@@ -84,3 +84,12 @@ body{
 .modal-backdrop {
     z-index: 0;
   }
+
+.pet_card_h3_underline30{
+    border-top: 3px solid #ffc5c2!important;
+    width: 40px!important;
+}
+
+.collect_content{
+    background-color:#F9F1F0!important;
+}

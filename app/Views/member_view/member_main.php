@@ -148,7 +148,39 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <div class="p-4 tab_profile">  
+                            <h3 class="font-weight-bold">浪浪收藏</h3>
+                            <small class="text-muted font-weight-bold">管理你所收藏的浪浪資訊</small>
+                        </div>    
                         
+                        <div class="p-4 row">
+                            <div class="col-12  m-2 p-2" >
+                                <div class="row mb-3 p-3 shadow rounded collect_content" >
+                                    <div class="col-lg-4 col-md-4 col-12">
+                                        <img class="img-fluid img-thumbnail" src="https://asms.coa.gov.tw/amlapp/upload/pic/4a932628-ba81-4540-8afa-14bd48170413_org.jpg" alt="" width="400px" height="300px">
+                                    </div>
+                                    <div class="col-lg-8 col-md-8 col-12 ">
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <h4 class="font-weight-bold text-dark text-center">
+                                                    浪浪資訊
+                                                </h4>
+                                                <hr class="pet_card_h3_underline30">
+                                            </div>
+                                            <div class="col-12"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-3 p-3   shadow rounded collect_content" >
+                                    <div class="col-4">
+                                        <img class="img-fluid img-thumbnail" src="https://asms.coa.gov.tw/amlapp/upload/pic/4a932628-ba81-4540-8afa-14bd48170413_org.jpg" alt="" width="400px" height="300px">
+                                    </div>
+                                    <div class="col-8">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam corporis, voluptate quis vero dolores velit adipisci! Odit eos doloribus consequuntur amet. Laudantium, dignissimos consectetur? Esse minus non sunt dicta alias.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
                         <div class="p-4 tab_profile">
@@ -160,25 +192,26 @@
                                 <div class="col d-flex justify-content-end align-items-end">
                                     <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModalCenter">立即刊登</button>
                                     <!-- Modal -->
-<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
+                                        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                ...
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <!-- Modal end -->
                                 </div>
                                 
                             </div>
