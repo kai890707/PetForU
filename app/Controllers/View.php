@@ -32,7 +32,7 @@ class View extends BaseController
         ];
         echo view('find_view/find', $data);
     }
-    public function pet_view($id=null)
+    public function pet_view($id = null)
     {
         $data = [
             'page_title' => '浪浪資訊',
@@ -46,5 +46,4 @@ class View extends BaseController
         ];
         echo view('member_view/member', $data);
     }
- 
 }

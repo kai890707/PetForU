@@ -15,6 +15,8 @@ class RegisterController extends BaseController
         $user_phone = $this->request->getPostGet('user_phone');
         $user_photo = $this->request->getPostGet('user_photo');
         $model = new UserModel();
+
+        //deal with image
         if ($user_photo != '') {
             if ($user_photo->isValid() && !$user_photo->hasMoved()) {
                 $imageName = $user_photo->getRandoName();
@@ -22,6 +24,7 @@ class RegisterController extends BaseController
                 $user_photo = $imageName;
             }
         }
+
         $data = [
             'user_account' => $user_account,
             'user_password' => $user_password,

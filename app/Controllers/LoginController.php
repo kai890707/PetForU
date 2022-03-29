@@ -39,6 +39,6 @@ class LoginController extends BaseController
     {
         $session = session();
         $session->destroy();
-        return view('index');
+        echo view('sign_view/login');
     }
 }

@@ -39,8 +39,14 @@ $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
 $routes->get('/person', 'View::person_view');
 
-$routes->post('/loginTest', 'LoginController::Login');
-$routes->get('/user', 'UserController::index');
+//Login And Logout Route
+$routes->post('/loginController', 'LoginController::Login');
+$routes->get('/logout', 'LoginController::Logout');
+
+// Pet
+$routes->post('/loadPet', 'PetController::loadPetData');
+$routes->post('/condition', 'PetController::conditionSelectPet');
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
