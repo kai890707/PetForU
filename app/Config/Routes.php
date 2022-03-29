@@ -39,11 +39,8 @@ $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
 $routes->get('/person', 'View::person_view');
 
-<<<<<<< HEAD
 $routes->post('/loginTest', 'LoginController::Login');
-=======
 $routes->get('/user', 'UserController::index');
->>>>>>> d67910d365667aabe741f8d85a9fd35363469d62
 /*
  * --------------------------------------------------------------------
  * Additional Routing
