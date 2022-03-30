@@ -47,6 +47,9 @@ $routes->get('/logout', 'LoginController::Logout');
 $routes->post('/loadPet', 'PetController::loadPetData');
 $routes->post('/condition', 'PetController::conditionSelectPet');
 
+//User Data
+$routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
