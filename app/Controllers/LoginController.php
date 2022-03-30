@@ -34,7 +34,6 @@ class LoginController extends BaseController
             return json_encode(['loginStatus' => 'fail', 'data' => [$loginAns]]);
         }
     }
-
     public function Logout()
     {
         $session = session();

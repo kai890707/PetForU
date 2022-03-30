@@ -50,6 +50,8 @@ $routes->post('/condition', 'PetController::conditionSelectPet');
 //User Data
 $routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
 
+// Published
+$routes->post('/createPublish', 'PublishedController::createPublish'); //修改個人圖片測試api
 /*
  * --------------------------------------------------------------------
  * Additional Routing
