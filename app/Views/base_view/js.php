@@ -26,6 +26,7 @@
     <script src="<?php echo base_url('public')?>/assets/js/mail-script.js"></script>
     <script src="<?php echo base_url('public')?>/assets/js/sweetalert2.js"></script>
     <script src="<?php echo base_url('public')?>/assets/js/main.js"></script>
+    <script src="<?php echo base_url('public')?>/assets/js/baseLib.js"></script>
     <script>
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
@@ -44,4 +45,5 @@
         var timepicker = $('#timepicker').timepicker({
          format: 'HH.MM'
      });
+     BaseLib.initLib('<?php echo base_url() ?>');
     </script>

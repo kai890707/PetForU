@@ -91,5 +91,10 @@ body{
 }
 
 .collect_content{
-    background-color:#F9F1F0!important;
+    background-color:#F8F8FF!important;
+}
+
+.pet_col_underline70{
+    border-top: 1px solid #ffc5c2!important;
+    width: 70px!important;
 }

@@ -23,27 +23,27 @@
                 <h1 class="text-center mb-3">PetForU</h1>
                     <div class="section_title  mb-95">
                
-                    <form id="register_form">
+                    <form id="register-form" enctype="multipart/form-data">
                         <div class="form-group">
-                            <input type="text" class="form-control form-control-lg" id="name" aria-describedby="emailHelp" placeholder="輸入您的名稱">
+                            <input type="text" class="form-control form-control-lg" id="name" name="user_name" aria-describedby="emailHelp" placeholder="輸入您的名稱">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" id="account" aria-describedby="emailHelp" placeholder="輸入您將建立的帳號">
+                            <input type="email" class="form-control form-control-lg" id="account"name="user_account" aria-describedby="emailHelp" placeholder="輸入您將建立的帳號">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control form-control-lg" id="password1" placeholder="輸入您將建立的密碼">
+                            <input type="password" class="form-control form-control-lg" id="password1" name="user_password"  placeholder="輸入您將建立的密碼">
                         </div>
                         <div class="form-group">
-                            <input type="password" class="form-control form-control-lg" id="password2" placeholder="再次輸入密碼">
+                            <input type="password" class="form-control form-control-lg" id="password2"name="user_repassword" placeholder="再次輸入密碼">
                         </div>
                         <div class="form-group">
-                        <input type="text" class="form-control form-control-lg" id="phone" placeholder="輸入您的電話號碼">
+                        <input type="text" class="form-control form-control-lg" id="phone"name="user_phone" placeholder="輸入您的電話號碼">
                         </div>
                         <div class="form-group">
-                            <select class="form-control form-control-lg">
-                                <option>男性</option>
-                                <option>女性</option>
-                                <option>不願透漏</option>
+                            <select class="form-control form-control-lg" name="user_gender">
+                                <option value="male">男性</option>
+                                <option value="female">女性</option>
+                                <option value="none">不願透漏</option>
                             </select>
                         </div>
                         <small id="emailHelp" class="form-text text-muted mb-3">*我們永遠不會跟他人分享您的資訊</small>

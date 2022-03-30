@@ -29,9 +29,9 @@ class LoginController extends BaseController
             $session->set('user_phone', $loginAns['user_phone']);
             $session->set('user_photo', $loginAns['user_photo']);
 
-            return json_encode(['loginStatus' => 'success', 'data' => [$loginAns]]);
+            return json_encode(['status' => 'success','message'=>"登入成功", 'data' => [$loginAns]]);
         } else {
-            return json_encode(['loginStatus' => 'fail', 'data' => [$loginAns]]);
+            return json_encode(['status' => 'fail','message'=>"登入失敗", 'data' => [$loginAns]]);
         }
     }
     public function Logout()

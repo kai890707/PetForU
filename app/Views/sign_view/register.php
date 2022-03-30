@@ -14,52 +14,85 @@
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
    <script>
-    $('form').submit(function(e) {
-    e.preventDefault();
-    login.submit();
-})
-var login = {
-    $formDom: $('#register_form'),
-
-    submit: function() {
-        var data = this.$formDom.getFormObject();
-        console.log(data);
-        // if (this.checkForm(data)) return;
-        // console.log(this.checkForm(data));
-        // baseFunction.ajaxPost("login/login", data).then(
-        //     (res) => {
-        //         console.log(res);
-        //         if (res.status == 1) {
-        //             Swal.fire("success", "Sign in successfully", "success").then((result) => {
-        //                 if (result) {
-        //                     window.location.reload();
-        //                 } else {
-        //                     window.location.reload();
-        //                 }
-        //             });
-        //             setTimeout(() => {
-        //                 window.location.reload();
-        //             }, 2000);
-        //         } else {
-        //             Swal.fire("error", "email or password incorrect", "error");
-        //             return true;
-        //         }
-        //     }, (err) => {
-        //         console.log(err);
-        //     }
-        // )
-    },
-    checkForm: function(formData) {
-        if (formData.email == " ") {
-            Swal.fire("info", "Email cannot be empty", "info");
-            return true;
-        } else if (formData.password == " ") {
-            Swal.fire("info", "Password cannot be empty", "info");
-            return true;
-        } else {
+        // // Get the form.
+        // var form = $('#register-form');
+        // // Set up an event listener for the contact form.
+        // $(form).submit(function(e) {
+        //     // Stop the browser from submitting the form.
+        //     e.preventDefault();
+        //     // let data = form.getFormObject();
+        //     // Serialize the form data.
+        //     var formData = $(form).serialize();
+        //     console.log(formData);
+           
+        // });
+        $("form[id='register-form']").submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(document.getElementById('register-form'));
+            // console.log(formData.get('user_gender'));
+            if (checkRegister(formData)) return;
+            BaseLib.Post("/public/register",formData).then(
+                (res)=>{
+                    BaseLib.ResponseCheck(res);
+                },
+                (err)=>{
+                    console.log(err);
+                })
+        })
+        function checkRegister(formData) {
+            if(formData.get('user_password')!== formData.get('user_repassword')){
+                Swal.fire(
+                    '輸入錯誤!',
+                    '二次輸入的密碼不符合!',
+                    'info'
+                )
+                return true;
+            }
+            if(formData.get('user_password').length<=6){
+                Swal.fire(
+                    '提醒!',
+                    '密碼必須大於6個英文字!',
+                    'info'
+                )
+                return true;
+            }
+            if(!Number(formData.get('user_phone'))){
+                Swal.fire(
+                    '提醒!',
+                    '電話號碼必須為數字!',
+                    'info'
+                ) 
+                return true;
+            }
             return false;
         }
-    }
-}
+		// request_Base.ajaxPost("Login/userLogin", data).then(
+		// 	(res) => {
+		// 		// console.log(res);
+		// 		// console.log(aes_Lib.CryptoJSAesDecrypt_WithData(res))
+		// 		result = aes_Lib.CryptoJSAesDecrypt_WithData(res);
+		// 		if (result.status == 1) {
+		// 			Swal.fire({
+		// 				icon: "success",
+		// 				title: "提醒...",
+		// 				text: "登入成功，即將為您跳轉",
+		// 			}).then(() => {
+		// 				setTimeout(() => {
+		// 					window.location.href = lib_Config.base_Url + "/Home/home";
+		// 				}, 0);
+		// 			});
+					
+		// 		} else {
+		// 			Swal.fire({
+		// 				icon: "info",
+		// 				title: "提醒...",
+		// 				text: "登入失敗，請重新登入",
+		// 			});
+		// 		}
+		// 	},
+		// 	(err) => {
+		// 		console.log(err);
+		// 	}
+		// );
    </script>
 <?= $this->endSection() ?>

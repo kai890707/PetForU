@@ -43,6 +43,10 @@ $routes->get('/person', 'View::person_view');
 $routes->post('/loginController', 'LoginController::Login');
 $routes->get('/logout', 'LoginController::Logout');
 
+
+//Register Route
+$routes->post('/register', 'RegisterController::creatRegister');
+
 // Pet
 $routes->post('/loadPet', 'PetController::loadPetData');
 $routes->post('/condition', 'PetController::conditionSelectPet');

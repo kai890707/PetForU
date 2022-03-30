@@ -23,13 +23,13 @@ class UserController extends BaseController
                 ];
                 $ans = $model->update($user_id, $data);
                 if ($ans) {
-                    return json_encode(['updateStatus' => 'success', 'updateMessage' => '大頭貼修改成功']);
+                    return json_encode(['status' => 'success', 'message' => '大頭貼修改成功']);
                 } else {
-                    return json_encode(['updateStatus' => 'fail', 'updateMessage' => '大頭貼修改失敗']);
+                    return json_encode(['status' => 'fail', 'message' => '大頭貼修改失敗']);
                 }
             }
         } else {
-            return json_encode(['updateStatus' => 'error', 'updateMessage' => '找不到檔案']);
+            return json_encode(['updateStatus' => 'error', 'message' => '找不到檔案']);
         }
     }
 
@@ -52,12 +52,12 @@ class UserController extends BaseController
             ];
             $updatePasswordAns = $model->update($user_id, $data);
             if ($updatePasswordAns) {
-                return json_encode(['updateStatus' => 'success', 'updateMessage' => '修改密碼成功']);
+                return json_encode(['status' => 'success', 'message' => '修改密碼成功']);
             } else {
-                return json_encode(['updateStatus' => 'success', 'updateMessage' => '修改密碼失敗']);
+                return json_encode(['status' => 'success', 'message' => '修改密碼失敗']);
             }
         } else {
-            return json_encode(['updateStatus' => 'error', 'updateMessage' => '原密碼輸入錯誤']);
+            return json_encode(['status' => 'error', 'message' => '原密碼輸入錯誤']);
         }
     }
 }

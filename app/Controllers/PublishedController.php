@@ -68,9 +68,9 @@ class PublishedController extends BaseController
         $result = $model->save($data);
 
         if ($result) {
-            return json_encode(['publishStatus' => 'success', 'publishMessage' => '新增成功']);
+            return json_encode(['status' => 'success', 'message' => '新增成功']);
         } else {
-            return json_encode(['publishStatus' => 'success', 'publishMessage' => '新增失敗']);
+            return json_encode(['status' => 'success', 'message' => '新增失敗']);
         }
     }
     public function editPublish()

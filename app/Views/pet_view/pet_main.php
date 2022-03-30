@@ -23,8 +23,7 @@
                             <img class="img-fluid img-thumbnail" src="https://asms.coa.gov.tw/amlapp/upload/pic/4a932628-ba81-4540-8afa-14bd48170413_org.jpg" alt="" width="400px" height="300px">
                         </div>
                         <div class="blog_details col-lg-6 col-md-6 col-12 p-4">
-                            <h2>動物資訊
-                            </h2>
+                            <h2 class="d-flex justify-content-between"> <span>動物資訊</span>  <button class="btn btn-outline-success">加入收藏</button></h2>
                             <p class="excert">
                                 <table class="table table-borderless">
                                     <thead class="table-warning">
