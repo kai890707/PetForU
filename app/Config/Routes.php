@@ -38,9 +38,9 @@ $routes->get('/register', 'View::register_view');
 $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
 $routes->get('/person', 'View::person_view');
-
+$routes->get('/publish', 'View::publish_view');
 //Login And Logout Route
-$routes->post('/loginController', 'LoginController::Login');
+$routes->post('/login', 'LoginController::Login');
 $routes->get('/logout', 'LoginController::Logout');
 
 

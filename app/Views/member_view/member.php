@@ -39,6 +39,33 @@
                 } else {       
                     return false;    
                 }}
+        $('#name_change').click(()=>{
+            $('#name_input').removeClass('d-none');
+            $('#name_save').removeClass('d-none');
+            $('#show_name').addClass('d-none');
+            $("#name_change").addClass('d-none');
+            
+        })
+        $('#name_save').click(()=>{
+            $('#name_input').addClass('d-none');
+            $('#name_save').addClass('d-none');
+            $('#show_name').removeClass('d-none');
+            $("#name_change").removeClass('d-none');
+        })
+        $('#phone_change').click(()=>{
+            $('#phone_input').removeClass('d-none');
+            $('#phone_save').removeClass('d-none');
+            $('#show_phone').addClass('d-none');
+            $("#phone_change").addClass('d-none');
+            
+        })
+        $('#phone_save').click(()=>{
+            $('#phone_input').addClass('d-none');
+            $('#phone_save').addClass('d-none');
+            $('#show_phone').removeClass('d-none');
+            $("#phonename_change").removeClass('d-none');
+        })
+
     </script>
 <?= $this->endSection() ?>
 

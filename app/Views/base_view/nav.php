@@ -1,12 +1,15 @@
+<!-- incluse session objects -->
+<?php $session = \Config\Services::session(); ?>
 <header>
         <div class="header-area ">
             <div id="sticky-header" class="main-header-area">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-xl-3 col-lg-3">
-                            <div class="logo">
-                                <a href="index.html">
-                                    <img src="<?php echo base_url('public')?>/assets/img/logo.png" alt="">
+                            <div class="logo font-weight-bold ">
+                                <a href="<?php echo base_url('/public')?>" class="logo-color">
+                              
+                                   PETFORU.com
                                 </a>
                             </div>
                         </div>
@@ -15,22 +18,15 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a  href="<?php echo base_url('public/')?>">首頁</a></li>
-                                        <li><a href="about.html">關於我們</a></li>
-                                        <li><a href="#">blog <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="blog.html">blog</a></li>
-                                                <li><a href="single-blog.html">single-blog</a></li>
-                                            </ul>
-                                        </li>
-                                        <li><a href="#">pages <i class="ti-angle-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="elements.html">elements</a></li>
-                                                
-                                            </ul>
-                                        </li>
                                         <li><a href="<?php echo base_url('public')?>/find">找浪浪</a></li>
-                                        <li><a href="service.html">寵物媒合</a></li>
-                                        <li><a href="<?php echo base_url('public')?>/login">登入</a></li>
+                                        <li><a href="<?php echo base_url('public')?>/publish">寵物媒合</a></li>
+                                        
+                                        <?php if(session()->has('user_account')){?>
+                                            <li><a href="<?php echo base_url('public')?>/person">個人資訊</a></li>
+                                        <?php }else{?>
+                                            <li><a href="<?php echo base_url('public')?>/login">登入</a></li>
+                                            
+                                        <?php }?>
                                     </ul>
                                 </nav>
                             </div>

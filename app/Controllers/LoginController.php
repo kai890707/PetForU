@@ -9,6 +9,8 @@ class LoginController extends BaseController
 {
     public function Login()
     {
+        $session = \Config\Services::session();
+        $session->start();
         $user_account = $this->request->getPostGet('user_account');
         $user_password = $this->request->getPostGet('user_passowrd');
         $model = new UserModel();
@@ -22,12 +24,12 @@ class LoginController extends BaseController
         // return json_encode($loginAns);
         if ($loginAns) {
             $session->set('user_id', $loginAns['user_id']);
-            $session->set('user_account', $loginAns['user_name']);
-            $session->set('user_password', $loginAns['user_password']);
+            $session->set('user_account', $loginAns['user_account']);
+            // $session->set('user_password', $loginAns['user_password']);
             $session->set('user_name', $loginAns['user_name']);
-            $session->set('user_gender', $loginAns['user_gender']);
-            $session->set('user_phone', $loginAns['user_phone']);
-            $session->set('user_photo', $loginAns['user_photo']);
+            // $session->set('user_gender', $loginAns['user_gender']);
+            // $session->set('user_phone', $loginAns['user_phone']);
+            // $session->set('user_photo', $loginAns['user_photo']);
 
             return json_encode(['status' => 'success','message'=>"登入成功", 'data' => [$loginAns]]);
         } else {

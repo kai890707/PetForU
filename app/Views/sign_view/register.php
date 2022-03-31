@@ -14,18 +14,6 @@
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
    <script>
-        // // Get the form.
-        // var form = $('#register-form');
-        // // Set up an event listener for the contact form.
-        // $(form).submit(function(e) {
-        //     // Stop the browser from submitting the form.
-        //     e.preventDefault();
-        //     // let data = form.getFormObject();
-        //     // Serialize the form data.
-        //     var formData = $(form).serialize();
-        //     console.log(formData);
-           
-        // });
         $("form[id='register-form']").submit(function(e) {
             e.preventDefault();
             var formData = new FormData(document.getElementById('register-form'));
@@ -33,7 +21,12 @@
             if (checkRegister(formData)) return;
             BaseLib.Post("/public/register",formData).then(
                 (res)=>{
-                    BaseLib.ResponseCheck(res);
+                    BaseLib.ResponseCheck(res).then(()=>{
+                        if(res.status =="success"){
+                            window.location=BaseLib.base_Url+"/public/login"
+                        }
+                    })
+                    
                 },
                 (err)=>{
                     console.log(err);

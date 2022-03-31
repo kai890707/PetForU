@@ -44,13 +44,15 @@
                     </div>
                     <div class="col-xl-3 col-md-6 col-lg-3 ">
                         <div class="footer_widget">
-                            <div class="footer_logo">
-                                <a href="#">
-                                    <img src="assets/img/logo.png" alt="">
-                                </a>
+                            <div class="footer_logo font-weight-bold ">
+                               
+                                    <a href="<?php echo base_url('/public')?>" class="logo-color">
+                                        <!-- <img src="<?php echo base_url('public')?>/assets/img/logo.png" alt=""> -->
+                                    PETFORU.com
+                                    </a>
+                                
                             </div>
-                            <p class="address_text">239 E 5th St, New York 
-                                NY 10003, USA
+                            <p class="address_text">高雄市燕巢區橫山路59號,台灣
                             </p>
                             <div class="socail_links">
                                 <ul>

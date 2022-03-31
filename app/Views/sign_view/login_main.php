@@ -23,21 +23,21 @@
                 <h1 class="text-center mb-3">PetForU</h1>
                     <div class="section_title  mb-95">
                      
-                    <form>
+                    <form id="login-form">
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1" class="h4  text-center">帳號</label> -->
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="輸入您的帳號">
+                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"  name="user_account" aria-describedby="emailHelp" placeholder="輸入您的帳號">
                             <small id="emailHelp" class="form-text text-muted">*我們永遠不會跟他人分享您的資訊</small>
                         </div>
                         <div class="form-group">
                             <!-- <label for="exampleInputPassword1" class="h4 text-center">密碼</label> -->
-                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1" placeholder="輸入您的密碼">
+                            <input type="password" class="form-control form-control-lg" id="exampleInputPassword1"name="user_password" placeholder="輸入您的密碼">
                         </div>
                         <div class="form-group d-flex justify-content-center mb-4 mt-4">
                            <a href="#" >忘記帳號?</a>     
                         </div>
                         <div class="form-group ">
-                            <a href="#" class="genric-btn danger-border circle w-100 mb-4" style="font-size: 1.2em!important">登入</a>
+                            <button  type="submit" class="genric-btn danger-border circle w-100 mb-4" style="font-size: 1.2em!important">登入</button>
                             <a href="register" class="genric-btn success-border circle w-100" style="font-size: 1.2em!important">註冊</a>
                         </div>
                     </form>

@@ -46,4 +46,11 @@ class View extends BaseController
         ];
         echo view('member_view/member', $data);
     }
+    public function publish_view()
+    {
+        $data = [
+            'page_title' => '寵物媒合',
+        ];
+        echo view('publish_view/publish', $data);
+    }
 }

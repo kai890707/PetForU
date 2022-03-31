@@ -9,9 +9,9 @@
                 <div class="row">
                     <div class="col-lg-5 col-md-6">
                         <div class="slider_text">
-                            <h3>Pet For<br> <span>Your</span></h3>
+                            <h3>Pet For<br> <span>You</span></h3>
                             <p>完整的流浪動物資訊與動物認養平台，提供使用者良好的用戶體驗。</p>
-                            <a href="contact.html" class="boxed-btn4">開始使用</a>
+                            <a href="<?php echo base_url('/public/find')?>" class="boxed-btn4">開始使用</a>
                         </div>
                     </div>
                 </div>
