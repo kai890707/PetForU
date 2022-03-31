@@ -3,7 +3,7 @@
     <small class="text-muted font-weight-bold">定期更改密碼可以有效保護你的帳戶</small>
 </div>    
 <div class="p-4">    
-    <form>
+    <form id="change-password-form">
         <div class="form-group row">
             <label for="before_pass" class="col-sm-5 col-form-label">輸入原有密碼</label>
             <div class="col-sm-7">

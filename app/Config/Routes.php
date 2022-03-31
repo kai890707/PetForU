@@ -37,7 +37,7 @@ $routes->get('/login', 'View::login_view');
 $routes->get('/register', 'View::register_view');
 $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
-$routes->get('/person', 'View::person_view');
+$routes->get('/person', 'View::person_view', ["filter" => "auth"]);
 $routes->get('/publish', 'View::publish_view');
 //Login And Logout Route
 $routes->post('/login', 'LoginController::Login');
@@ -56,6 +56,8 @@ $routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人
 
 // Published
 $routes->post('/createPublish', 'PublishedController::createPublish'); //修改個人圖片測試api
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing

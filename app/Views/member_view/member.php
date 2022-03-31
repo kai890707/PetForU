@@ -65,7 +65,51 @@
             $('#show_phone').removeClass('d-none');
             $("#phonename_change").removeClass('d-none');
         })
-
+        $("form[id='change-password-form']").submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(document.getElementById('change-password-form'));
+            // console.log(formData.get('user_gender'));
+            if (checkRegister(formData)) return;
+            BaseLib.Post("/public/register",formData).then(
+                (res)=>{
+                    BaseLib.ResponseCheck(res).then(()=>{
+                        if(res.status =="success"){
+                            window.location=BaseLib.base_Url+"/public/login"
+                        }
+                    })
+                    
+                },
+                (err)=>{
+                    console.log(err);
+                })
+        })
+        function checkRegister(formData) {
+            if(formData.get('user_password')!== formData.get('user_repassword')){
+                Swal.fire(
+                    '輸入錯誤!',
+                    '二次輸入的密碼不符合!',
+                    'info'
+                )
+                return true;
+            }
+            if(formData.get('user_password').length<=6){
+                Swal.fire(
+                    '提醒!',
+                    '密碼必須大於6個英文字!',
+                    'info'
+                )
+                return true;
+            }
+            if(!Number(formData.get('user_phone'))){
+                Swal.fire(
+                    '提醒!',
+                    '電話號碼必須為數字!',
+                    'info'
+                ) 
+                return true;
+            }
+            return false;
+        }
     </script>
 <?= $this->endSection() ?>
 
