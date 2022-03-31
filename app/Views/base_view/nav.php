@@ -18,13 +18,14 @@
                                 <nav>
                                     <ul id="navigation">
                                         <li><a  href="<?php echo base_url('public/')?>">首頁</a></li>
-                                        <li><a href="<?php echo base_url('public')?>/find">找浪浪</a></li>
-                                        <li><a href="<?php echo base_url('public')?>/publish">寵物媒合</a></li>
+                                        <li><a href="<?php echo base_url('public/find')?>">找浪浪</a></li>
+                                        <li><a href="<?php echo base_url('public/publish')?>">寵物媒合</a></li>
                                         
                                         <?php if(session()->has('user_account')){?>
-                                            <li><a href="<?php echo base_url('public')?>/person">個人資訊</a></li>
+                                            <li><a href="<?php echo base_url('public/person')?>">個人資訊</a></li>
+                                            <li><a href="<?php echo base_url('public/logout')?>">登出</a></li>
                                         <?php }else{?>
-                                            <li><a href="<?php echo base_url('public')?>/login">登入</a></li>
+                                            <li><a href="<?php echo base_url('public/login')?>">登入</a></li>
                                             
                                         <?php }?>
                                     </ul>

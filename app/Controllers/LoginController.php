@@ -40,6 +40,6 @@ class LoginController extends BaseController
     {
         $session = session();
         $session->destroy();
-        echo view('sign_view/login');
+        return redirect()->to(base_url('/public/login'));
     }
 }

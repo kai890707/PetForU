@@ -62,6 +62,10 @@ body{
     visibility: hidden;
     position: absolute;
 }
+.pet_file {
+    visibility: hidden;
+    position: absolute;
+}
 .pet_card{
     cursor: pointer!important;
 }

@@ -24,7 +24,7 @@
                 (res)=>{
                     BaseLib.ResponseCheck(res).then(()=>{
                         if(res.status =="success"){
-                            window.location.reload();
+                            window.location=BaseLib.base_Url+"/public/person";
                         }
                     })
                     

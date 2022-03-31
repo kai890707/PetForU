@@ -31,14 +31,23 @@
             // read the image file as a data URL.
             reader.readAsDataURL(this.files[0]);
         });
-        function isHasImg(pathImg){
-                var ImgObj=new Image();    
-                ImgObj.src= pathImg;     
-                if(ImgObj.fileSize > 0 || (ImgObj.width > 0 && ImgObj.height > 0)){       
-                    return true;     
-                } else {       
-                    return false;    
-                }}
+        $(document).on("click", ".pet_browse", function() {
+            var file = $(this).parents().find(".pet_file");
+            file.trigger("click");
+            });
+            $('input[type="file"]').change(function(e) {
+            var fileName = e.target.files[0].name;
+            $("#petimgfile").val(fileName);
+
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("pet_preview").src = e.target.result;
+            };
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+        });
+       
         $('#name_change').click(()=>{
             $('#name_input').removeClass('d-none');
             $('#name_save').removeClass('d-none');
