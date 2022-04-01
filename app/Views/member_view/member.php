@@ -81,7 +81,7 @@
             e.preventDefault();
             var formData = new FormData(document.getElementById('change-password-form'));
             // if (checkRegister(formData)) return;
-            BaseLib.Post("/public/register",formData).then(
+            BaseLib.Post("/public/rePassword",formData).then(
                 (res)=>{
                     BaseLib.ResponseCheck(res).then(()=>{
                         if(res.status =="success"){
