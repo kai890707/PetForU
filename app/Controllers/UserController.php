@@ -18,14 +18,24 @@ class UserController extends BaseController
     {
         $data = $this->request->getVar();
         $user_id = $this->session->get('user_id');
-        if ($data['user_photo'] != '') {
-            if ($data['user_photo']->isValid() && !$data['user_photo']->hasMoved()) {
-                $imageName = $data['user_photo']->getRandoName();
-                $data['user_photo']->move('userImage/', $imageName);
-                $data['user_photo'] = $imageName;
-            }
+        $user_photo = $this->request->getFile('user_photo');
+        $re_user_photo = $user_photo->getName();
+        $temp = explode(".",$re_user_photo);
+        $newfilename = round(microtime(true)) . '.' . end($temp);
+
+        if($user_photo->move("userImage", $newfilename)){
+            $ImageData = 'userImage/'.$newfilename;
+        }else{
+            $ImageData = '';
         }
-        if ($this->model->updateUserInformation($user_id, $data)) {
+        
+        $updateData = [
+            'user_name' => $data['user_name'],
+            'user_phone' => $data['user_phone'],
+            'user_photo' => $ImageData,
+        ];
+
+        if ($this->model->updateUserInformation($user_id, $updateData)) {
             return json_encode(['status' => 'success', 'message' => '資料修改成功']);
         } else {
             return json_encode(['status' => 'fail', 'message' => '資料修改失敗']);

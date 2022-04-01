@@ -31,4 +31,9 @@ class PetModel extends Model
         'pet_phone',
         'city_id',
     ];
+
+    public function selectPetData()
+    {
+        # code...
+    }
 }

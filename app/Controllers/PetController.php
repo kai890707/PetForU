@@ -13,26 +13,57 @@ class PetController extends BaseController
         $this->model = new PetModel();
     }
 
-
-    public function loadPetData()
+    public function loadAllData()
     {
-        $city_id = $this->request->getPostGet('city_id');
-        $model = new PetModel();
-        $result = $model->where('city_id', $city_id)->findAll();
-        return json_encode($result);
+        return $this->response->setJson($this->model->findAll());
     }
-
-    //條件搜尋
-    public function conditionSelectPet()
+    public function selectPetData()
     {
-        $city_id = $this->request->getPostGet('city_id');
-        $pet_kind = $this->request->getPostGet('pet_kind');
-        $pet_gender = $this->request->getPostGet('pet_gender');
-        $pet_bodytpye = $this->request->getPostGet('pet_bodytype');
+      $data = $this->request->getVar();
+      $dataArray = array();
+      
+        $nameFind = array(
+            'dog' => '狗',
+            'cat' => '貓',
+            'all' => 'all',
+            'small' => '小型',
+            'medium' => '中型',
+            'large' => '大型',
+            'male' => '男',
+            'female' => '女',
+            'child' => '幼年',
+            'adult' => '成年',
+            'yes' => '是',
+            'no' => '否',
+            
+        );
+      array_push(
+        $dataArray,
+        $data['city_id'],
+        $data['pet_kind'],
+        $data['pet_bodytype'],
+        $data['pet_gender'],
+        $data['pet_age'],
+        $data['pet_sterilization'],
+        $data['pet_bacterin'],
+      );
 
-        $model = new PetModel();
-        $result = $model->where('city_id', $city_id)->where('pet_kind', $pet_kind)->where('pet_gender', $pet_gender)->where('pet_bodytype', $pet_bodytpye)->findAll();
-        // print_r($result);
-        return json_encode($result);
+      for($i = 0;$i<count($dataArray);$i++){
+          if(isset($nameFind[$dataArray[$i]])){
+            $dataArray[$i] = $nameFind[$dataArray[$i]];
+          }
+      }
+      
+      $result = $this->model
+        ->where($dataArray[0] == 'all' ? 'city_id !=' : 'city_id', $dataArray[0] == 'all' ? NULL :$dataArray[0]) 
+        ->where($dataArray[1] == 'all' ? 'pet_kind !=' : 'pet_kind', $dataArray[1] == 'all' ? NULL :$dataArray[1]) 
+        ->where($dataArray[2] == 'all' ? 'pet_bodytype !=' : 'pet_bodytype', $dataArray[2] == 'all' ? NULL :$dataArray[2]) 
+        ->where($dataArray[3] == 'all' ? 'pet_gender !=' : 'pet_gender', $dataArray[3] == 'all' ? NULL :$dataArray[3]) 
+        ->where($dataArray[4] == 'all' ? 'pet_age !=' : 'pet_age', $dataArray[4] == 'all' ? NULL :$dataArray[4]) 
+        ->where($dataArray[5] == 'all' ? 'pet_sterilization !=' : 'pet_sterilization', $dataArray[5] == 'all' ? NULL :$dataArray[5]) 
+        ->where($dataArray[6] == 'all' ? 'pet_bacterin !=' : 'pet_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6]) 
+        ->findAll();
+      
+      return $this->response->setJSON($result);
     }
 }

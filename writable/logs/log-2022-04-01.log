@@ -1,0 +1,959 @@
+CRITICAL - 2022-04-01 14:07:51 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 14:07:55 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 14:07:56 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 14:08:06 --> Call to a member function get() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+ERROR - 2022-04-01 14:14:53 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[1]}' at line 3
+CRITICAL - 2022-04-01 14:14:53 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:14:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[1]}' at line 3
+CRITICAL - 2022-04-01 14:14:54 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:14:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[1]}' at line 3
+CRITICAL - 2022-04-01 14:14:54 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:23:02 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 狗' at line 3
+CRITICAL - 2022-04-01 14:23:02 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:23:03 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 狗' at line 3
+CRITICAL - 2022-04-01 14:23:03 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:23:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' 狗' at line 3
+CRITICAL - 2022-04-01 14:23:04 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:26:22 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:26:22 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:26:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:26:37 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:26:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:26:37 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:28:20 --> Unknown column 'pet_kind,貓' in 'where clause'
+CRITICAL - 2022-04-01 14:28:20 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:28:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:28:42 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:29:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:29:30 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:29:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:29:30 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:29:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:29:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:30:14 --> Unknown column 'pet_kind,貓' in 'where clause'
+CRITICAL - 2022-04-01 14:30:14 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:30:15 --> Unknown column 'pet_kind,貓' in 'where clause'
+CRITICAL - 2022-04-01 14:30:15 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:31:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `$dataArray[1]`' at line 3
+CRITICAL - 2022-04-01 14:31:37 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:31:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' `$dataArray[1]`' at line 3
+CRITICAL - 2022-04-01 14:31:38 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:32:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:32:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:32:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:32:32 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:32:50 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:32:50 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:32:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:32:51 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:10 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:10 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:24 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:25 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:25 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:25 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:26 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:26 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:32 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:32 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:32 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:47 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`NULL` = 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:47 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:51 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:51 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:33:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:33:52 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:34:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:34:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:34:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:34:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NOT NULL' at line 3
+CRITICAL - 2022-04-01 14:35:19 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NOT NULL' at line 3
+CRITICAL - 2022-04-01 14:35:27 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NOT NULL' at line 3
+CRITICAL - 2022-04-01 14:35:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NOT NULL' at line 3
+CRITICAL - 2022-04-01 14:35:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NOT NULL' at line 3
+CRITICAL - 2022-04-01 14:35:48 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NOT NULL' at line 3
+CRITICAL - 2022-04-01 14:35:49 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:56 --> Unknown column '貓' in 'where clause'
+CRITICAL - 2022-04-01 14:35:56 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:35:57 --> Unknown column '貓' in 'where clause'
+CRITICAL - 2022-04-01 14:35:57 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:36:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:36:23 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:36:24 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:36:24 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:37:06 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:37:06 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:37:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:37:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:37:07 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:37:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:25 --> Unknown column 'pet_kind貓' in 'where clause'
+CRITICAL - 2022-04-01 14:38:25 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:26 --> Unknown column 'pet_kind貓' in 'where clause'
+CRITICAL - 2022-04-01 14:38:26 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:47 --> Unknown column 'pet_kind$dataArray[1]' in 'where clause'
+CRITICAL - 2022-04-01 14:38:47 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:48 --> Unknown column 'pet_kind$dataArray[1]' in 'where clause'
+CRITICAL - 2022-04-01 14:38:48 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:55 --> Unknown column 'pet_kind貓' in 'where clause'
+CRITICAL - 2022-04-01 14:38:55 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:55 --> Unknown column 'pet_kind貓' in 'where clause'
+CRITICAL - 2022-04-01 14:38:55 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:38:56 --> Unknown column 'pet_kind貓' in 'where clause'
+CRITICAL - 2022-04-01 14:38:56 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:39:07 --> Unknown column '貓' in 'where clause'
+CRITICAL - 2022-04-01 14:39:07 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:39:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:39:19 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:39:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:39:20 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:39:55 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:39:55 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:04 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:40:04 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:05 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 'IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 14:40:05 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:40:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:40:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:40:29 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:40:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:40:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'IS NULL' at line 3
+CRITICAL - 2022-04-01 14:40:51 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:42:57 --> Unknown column 'pet_kind,' in 'where clause'
+CRITICAL - 2022-04-01 14:42:57 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:42:57 --> Unknown column 'pet_kind,' in 'where clause'
+CRITICAL - 2022-04-01 14:42:57 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:44:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' {$dataArray[1]}' at line 3
+CRITICAL - 2022-04-01 14:44:51 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:44:52 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' {$dataArray[1]}' at line 3
+CRITICAL - 2022-04-01 14:44:52 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:45:32 --> Unknown column 'pet_kindArray' in 'where clause'
+CRITICAL - 2022-04-01 14:45:32 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' all' at line 3
+CRITICAL - 2022-04-01 14:47:38 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' all' at line 3
+CRITICAL - 2022-04-01 14:47:38 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:45 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' all' at line 3
+CRITICAL - 2022-04-01 14:47:45 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' all' at line 3
+CRITICAL - 2022-04-01 14:47:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:46 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ' all' at line 3
+CRITICAL - 2022-04-01 14:47:46 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:56 --> Unknown column 'pet_kindall' in 'where clause'
+CRITICAL - 2022-04-01 14:47:56 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 14:47:57 --> Unknown column 'pet_kindall' in 'where clause'
+CRITICAL - 2022-04-01 14:47:57 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(62): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-01 14:56:46 --> syntax error, unexpected ','
+#0 C:\xampp\htdocs\petforyou\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\petforyou\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2022-04-01 14:56:47 --> syntax error, unexpected ','
+#0 C:\xampp\htdocs\petforyou\system\Autoloader\Autoloader.php(241): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs...')
+#1 C:\xampp\htdocs\petforyou\system\Autoloader\Autoloader.php(219): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers...')
+#2 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers...')
+#3 [internal function]: spl_autoload_call('App\\Controllers...')
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(797): class_exists('\\App\\Controller...', true)
+#5 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(406): CodeIgniter\CodeIgniter->startController()
+#6 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#8 {main}
+ERROR - 2022-04-01 15:04:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`:pet_kind` = pet_kind:' at line 3
+CRITICAL - 2022-04-01 15:04:08 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:04:30 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 15:04:30 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:04:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 15:04:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:04:31 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 15:04:31 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:04:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 15:04:33 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:04:33 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 15:04:33 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:06:20 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`:pet_kind` = > is NOT NULL:' at line 3
+CRITICAL - 2022-04-01 15:06:20 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:06:21 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`:pet_kind` = > is NOT NULL:' at line 3
+CRITICAL - 2022-04-01 15:06:21 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:06:37 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''IS NOT NULL'' at line 3
+CRITICAL - 2022-04-01 15:06:37 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:07:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '''' at line 3
+CRITICAL - 2022-04-01 15:07:13 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:07:13 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '''' at line 3
+CRITICAL - 2022-04-01 15:07:13 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:07:27 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0' at line 3
+CRITICAL - 2022-04-01 15:07:27 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:07:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0' at line 3
+CRITICAL - 2022-04-01 15:07:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:07:28 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0' at line 3
+CRITICAL - 2022-04-01 15:07:28 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+ERROR - 2022-04-01 15:07:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '0' at line 3
+CRITICAL - 2022-04-01 15:07:29 --> Call to a member function getResult() on bool
+#0 C:\xampp\htdocs\petforyou\system\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+#1 C:\xampp\htdocs\petforyou\app\Controllers\PetController.php(61): CodeIgniter\BaseModel->findAll()
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->loadPetData()
+#3 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#4 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#6 {main}
+CRITICAL - 2022-04-01 15:35:35 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:35:49 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:35:56 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:35:57 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:20 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:20 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:44 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:45 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:45 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:57 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:36:57 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:37:01 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}
+CRITICAL - 2022-04-01 15:37:01 --> Call to a member function getName() on null
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\UserController->updateUserData()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\UserController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

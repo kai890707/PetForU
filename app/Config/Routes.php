@@ -50,8 +50,8 @@ $routes->post('rePassword', 'UserController::updateUserPassword', ["filter" => "
 $routes->post('/register', 'RegisterController::creatRegister'); //checked
 
 // Pet
-$routes->post('/loadPet', 'PetController::loadPetData');
-$routes->post('/condition', 'PetController::conditionSelectPet');
+$routes->post('/allPet', 'PetController::loadAllData');
+$routes->post('/selectPet', 'PetController::selectPetData');
 
 //User Data
 $routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
