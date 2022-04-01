@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- 主機： 127.0.0.1
--- 產生時間： 2022-03-29 19:31:42
+-- 產生時間： 2022-04-01 18:04:50
 -- 伺服器版本： 10.4.22-MariaDB
 -- PHP 版本： 7.4.28
 
@@ -6562,6 +6562,14 @@ CREATE TABLE `published` (
   `user_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- 傾印資料表的資料 `published`
+--
+
+INSERT INTO `published` (`published_id`, `published_name`, `published_kind`, `published_variet`, `published_gender`, `published_bodytype`, `published_colour`, `published_age`, `published_sterilization`, `published_bacterin`, `published_status`, `published_remark`, `published_photo`, `published_createDate`, `user_id`) VALUES
+(1, '123', '貓', '布偶', '女', '小型', '黑色', '幼年', '否', '否', '無', '無', '無', '0000-00-00', 1),
+(2, '123', '貓', '布偶', '女', '小型', '黑色', '幼年', '否', '否', '無', '無', '無', '2022-03-30', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -6575,17 +6583,23 @@ CREATE TABLE `user` (
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_gender` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_phone` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_photo` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL
+  `user_photo` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `user_email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- 傾印資料表的資料 `user`
 --
 
-INSERT INTO `user` (`user_id`, `user_account`, `user_password`, `user_name`, `user_gender`, `user_phone`, `user_photo`) VALUES
-(1, 'aa324917', 'asd26455', 'bbb', '男', '091234556', ''),
-(2, 'aaa', 'aaa', 'bbb', '女', '0912312312', 'asdasdasd'),
-(9, '123123', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', '', '');
+INSERT INTO `user` (`user_id`, `user_account`, `user_password`, `user_name`, `user_gender`, `user_phone`, `user_photo`, `user_email`) VALUES
+(1, 'aa324917', 'asd26455', 'bbb', '男', '091234556', '', ''),
+(2, 'aaa', 'aaa', 'bbb', '女', '0912312312', 'asdasdasd', ''),
+(9, '123123', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', '', '', '', '', ''),
+(10, '123', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 'qwe', 'qwe', 'we', '', ''),
+(11, '456', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'qwe', 'qwe', 'we', '', ''),
+(12, '789', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'qwe', 'qwe', 'we', '', ''),
+(13, '8999', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'qwe', 'qwe', 'we', '', '123123@gmail.com'),
+(14, '8787', 'da39a3ee5e6b4b0d3255bfef95601890afd80709', 'qwe', 'qwe', 'we', '', '123123@gmail.com');
 
 --
 -- 已傾印資料表的索引
@@ -6647,13 +6661,13 @@ ALTER TABLE `pet`
 -- 使用資料表自動遞增(AUTO_INCREMENT) `published`
 --
 ALTER TABLE `published`
-  MODIFY `published_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `published_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- 使用資料表自動遞增(AUTO_INCREMENT) `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

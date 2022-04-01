@@ -50,4 +50,18 @@ class UserModel extends Model
             return false;
         }
     }
+
+    public function updateUserInformation($user_id, $data)
+    {
+        $request = [
+            'user_gender' => $data['user_gender'],
+            'user_photo' => $data['user_photo'],
+            'user_email' => $data['user_email'],
+        ];
+        if ($this->update($user_id, $request)) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }

@@ -14,49 +14,21 @@ class UserController extends BaseController
         $this->session->start();
         $this->model = new UserModel();
     }
-    public function updateUserPhoto()
-    {
-        $user_id = $this->request->getPostGet('user_id');
-        $user_photo = $this->request->getPostGet('user_photo');
-        //deal with image
-        if ($user_photo != '') {
-            if ($user_photo->isValid() && !$user_photo->hasMoved()) {
-                $imageName = $user_photo->getRandoName();
-                $user_photo->move('Image/', $imageName);
-                $user_photo = $imageName;
-                $data = [
-                    'user_photo' => $user_photo,
-                ];
-                $ans = $this->model->update($user_id, $data);
-                if ($ans) {
-                    return json_encode(['status' => 'success', 'message' => '大頭貼修改成功']);
-                } else {
-                    return json_encode(['status' => 'fail', 'message' => '大頭貼修改失敗']);
-                }
-            }
-        } else {
-            return json_encode(['updateStatus' => 'error', 'message' => '找不到檔案']);
-        }
-    }
-
     public function updateUserData()
     {
-        $user_id = session()->get('user_id');
-        $user_email = $this->request->getPostGet('user_email');
-        $user_photo = $this->request->getPostGet('user_photo');
-
-        if ($user_photo != '') {
-            if ($user_photo->isValid() && !$user_photo->hasMoved()) {
-                $imageName = $user_photo->getRandoName();
-                $user_photo->move('Image/', $imageName);
-                $user_photo = $imageName;
-
-                $model = new UserModel();
-                $data = [
-                    'user_email' => $user_email,
-                    'user_photo' => $user_photo,
-                ];
+        $data = $this->request->getVar();
+        $user_id = $this->session->get('user_id');
+        if ($data['user_photo'] != '') {
+            if ($data['user_photo']->isValid() && !$data['user_photo']->hasMoved()) {
+                $imageName = $data['user_photo']->getRandoName();
+                $data['user_photo']->move('Image/', $imageName);
+                $data['user_photo'] = $imageName;
             }
+        }
+        if ($this->model->updateUserInformation($user_id, $data)) {
+            return json_encode(['status' => 'success', 'message' => '資料修改成功']);
+        } else {
+            return json_encode(['status' => 'fail', 'message' => '資料修改失敗']);
         }
     }
     public function updateUserPassword()

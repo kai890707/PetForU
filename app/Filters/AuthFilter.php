@@ -28,10 +28,9 @@ class AuthFilter implements FilterInterface
         /**
          * 判斷是否存在user account這個session
          */
-        if (!session()->get("user_account")) { 
+        if (!session()->get("user_account")) {
             return redirect()->to(base_url('/public/login'));
         }
-
     }
 
     /**

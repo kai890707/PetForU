@@ -6,6 +6,14 @@ use App\Models\PetModel;
 
 class PetController extends BaseController
 {
+    protected $session;
+    protected $model;
+    public function __construct()
+    {
+        $this->model = new PetModel();
+    }
+
+
     public function loadPetData()
     {
         $city_id = $this->request->getPostGet('city_id');
@@ -27,6 +35,4 @@ class PetController extends BaseController
         // print_r($result);
         return json_encode($result);
     }
-
-    
 }
