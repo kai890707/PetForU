@@ -35,7 +35,7 @@ class UserController extends BaseController
 
     public function updateUserData()
     {
-        # code...
+        $user_id = $this->request->getPostGet('user_id');
     }
     public function updateUserPassword()
     {
