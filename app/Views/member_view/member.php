@@ -74,17 +74,39 @@
             $('#show_phone').removeClass('d-none');
             $("#phonename_change").removeClass('d-none');
         })
+        /**
+         * 修改密碼
+         */
         $("form[id='change-password-form']").submit(function(e) {
             e.preventDefault();
             var formData = new FormData(document.getElementById('change-password-form'));
-            // console.log(formData.get('user_gender'));
-            if (checkRegister(formData)) return;
+            // if (checkRegister(formData)) return;
             BaseLib.Post("/public/register",formData).then(
                 (res)=>{
                     BaseLib.ResponseCheck(res).then(()=>{
                         if(res.status =="success"){
                             window.location=BaseLib.base_Url+"/public/login"
                         }
+                    })
+                    
+                },
+                (err)=>{
+                    console.log(err);
+                })
+        })
+        /**
+         * 刊登寵物
+         */
+        $("form[id='post-pet-form']").submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(document.getElementById('post-pet-form'));
+            BaseLib.Post("/public/createPublish",formData).then(
+                (res)=>{
+                    BaseLib.ResponseCheck(res).then(()=>{
+                        // if(res.status =="success"){
+                        //     window.location=BaseLib.base_Url+"/public/login"
+                        // }
+                        console.log(res);
                     })
                     
                 },

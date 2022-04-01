@@ -15,43 +15,43 @@
                 <div class="form-group row">
                     <label for="publish_name" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物名字</label>
                     <div class="col-sm-7">
-                        <input type="password" class="form-control" id="publish_name" placeholder="小黑">
+                        <input type="text" class="form-control" id="publish_name"name="publish_name" placeholder="小黑">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="publish_kind" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物類型</label>
                     <div class="col-sm-7">
-                        <input type="password" class="form-control" id="publish_kind" placeholder="狗">
+                        <input type="text" class="form-control" id="publish_kind" name="publish_kind" placeholder="狗">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="publish_variet" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物品種</label>
                     <div class="col-sm-7">
-                    <input type="password" class="form-control" id="publish_variet" placeholder="柯基">
+                    <input type="text" class="form-control" id="publish_variet" name="publish_variet" placeholder="柯基">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="publish_gender" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物性別</label>
                     <div class="col-sm-7">
-                        <input type="password" class="form-control" id="publish_gender" placeholder="(男生、女生)">
+                        <input type="text" class="form-control" id="publish_gender"name="publish_gender" placeholder="(男生、女生)">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="publish_bodytype" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物體型</label>
                     <div class="col-sm-7">
-                        <input type="password" class="form-control" id="publish_bodytype" placeholder="(大型、中型、小型)">
+                        <input type="text" class="form-control" id="publish_bodytype" name="publish_bodytype" placeholder="(大型、中型、小型)">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="publish_colour" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物毛色</label>
                     <div class="col-sm-7">
-                    <input type="password" class="form-control" id="publish_colour" placeholder="金">
+                    <input type="text" class="form-control" id="publish_colour" placeholder="金"  name="publish_colour">
                     </div>
                 </div>
                 <div class="form-group row">
                     <label for="publish_age" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物年紀</label>
                     <div class="col-sm-7">
-                        <input type="password" class="form-control" id="publish_age" placeholder="5">
+                        <input type="text" class="form-control" id="publish_age" placeholder="5" name="publish_age">
                     </div>
                 </div>
                 <div class="form-group row">
@@ -81,15 +81,15 @@
                 <div class="form-group row">
                     <label for="publish_remark" class="col-sm-12 col-form-label"><span class="text-danger">*</span>寵物圖片</label>
                    
-                    <form method="post" id="image-form">
-                        <input type="file" name="petimg[]" class="pet_file" accept="image/*">
+                    <!-- <form method="post" id="image-form"> -->
+                        <input type="file" name="publish_photo" class="pet_file" accept="image/*">
                         <div class="input-group col-sm-12">
                             <input type="text" class="form-control" disabled placeholder="Upload File" id="petimgfile">
                             <div class="input-group-append">
                                 <button type="button" class="pet_browse btn btn-primary">上傳</button>
                             </div>
                         </div>
-                    </form>
+                    <!-- </form> -->
                     <div class=" col-sm-12">
                         <img src="" id="pet_preview" class="img-thumbnail">
                     </div>
@@ -97,7 +97,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                <button type="submit" class="btn btn-primary">保存</button>
+                <button id="publish-submit" type="submit" class="btn btn-primary">保存</button>
             </div>
         </form>
         </div>
