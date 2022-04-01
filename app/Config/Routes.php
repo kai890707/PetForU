@@ -40,14 +40,14 @@ $routes->get('/pet/(:num)', 'View::pet_view/$1');
 $routes->get('/person', 'View::person_view', ["filter" => "auth"]);
 $routes->get('/publish', 'View::publish_view');
 //Login And Logout Route
-$routes->post('/login', 'LoginController::Login');//checked
-$routes->get('/logout', 'LoginController::Logout');//checked
+$routes->post('/login', 'LoginController::Login'); //checked
+$routes->get('/logout', 'LoginController::Logout'); //checked
 
 
-$routes->post('rePassword','UserController::updateUserPassword', ["filter" => "auth"]); //checked
+$routes->post('rePassword', 'UserController::updateUserPassword', ["filter" => "auth"]); //checked
 
 //Register Route
-$routes->post('/register', 'RegisterController::creatRegister');//checked
+$routes->post('/register', 'RegisterController::creatRegister'); //checked
 
 // Pet
 $routes->post('/loadPet', 'PetController::loadPetData');
