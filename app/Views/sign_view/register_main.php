@@ -28,13 +28,16 @@
                             <input type="text" class="form-control form-control-lg" id="name" name="user_name" aria-describedby="emailHelp" placeholder="輸入您的名稱">
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control form-control-lg" id="account"name="user_account" aria-describedby="emailHelp" placeholder="輸入您將建立的帳號">
+                            <input type="text" class="form-control form-control-lg" id="account"name="user_account" aria-describedby="emailHelp" placeholder="輸入您將建立的帳號">
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control form-control-lg" id="password1" name="user_password"  placeholder="輸入您將建立的密碼">
                         </div>
                         <div class="form-group">
                             <input type="password" class="form-control form-control-lg" id="password2"name="user_repassword" placeholder="再次輸入密碼">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control form-control-lg" id="account"name="user_email" aria-describedby="emailHelp" placeholder="輸入您的電子郵件">
                         </div>
                         <div class="form-group">
                         <input type="text" class="form-control form-control-lg" id="phone"name="user_phone" placeholder="輸入您的電話號碼">
