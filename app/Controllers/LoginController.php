@@ -7,8 +7,14 @@ use App\Models\UserModel;
 
 class LoginController extends BaseController
 {
+    protected $model;
+    public function __construct()
+    {
+        $this->model = new UserModel();
+    }
     public function Login()
     {
+
         $session = \Config\Services::session();
         $session->start();
         $user_account = $this->request->getPostGet('user_account');
@@ -31,9 +37,9 @@ class LoginController extends BaseController
             // $session->set('user_phone', $loginAns['user_phone']);
             // $session->set('user_photo', $loginAns['user_photo']);
 
-            return json_encode(['status' => 'success','message'=>"登入成功", 'data' => [$loginAns]]);
+            return json_encode(['status' => 'success', 'message' => "登入成功", 'data' => [$loginAns]]);
         } else {
-            return json_encode(['status' => 'fail','message'=>"登入失敗", 'data' => [$loginAns]]);
+            return json_encode(['status' => 'fail', 'message' => "登入失敗", 'data' => [$loginAns]]);
         }
     }
     public function Logout()

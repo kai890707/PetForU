@@ -35,7 +35,23 @@ class UserController extends BaseController
 
     public function updateUserData()
     {
-        $user_id = $this->request->getPostGet('user_id');
+        $user_id = session()->get('user_id');
+        $user_email = $this->request->getPostGet('user_email');
+        $user_photo = $this->request->getPostGet('user_photo');
+
+        if ($user_photo != '') {
+            if ($user_photo->isValid() && !$user_photo->hasMoved()) {
+                $imageName = $user_photo->getRandoName();
+                $user_photo->move('Image/', $imageName);
+                $user_photo = $imageName;
+
+                $model = new UserModel();
+                $data = [
+                    'user_email' => $user_email,
+                    'user_photo' => $user_photo,
+                ];
+            }
+        }
     }
     public function updateUserPassword()
     {

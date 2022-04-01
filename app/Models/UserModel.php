@@ -17,6 +17,7 @@ class UserModel extends Model
         'user_gender',
         'user_phone',
         'user_photo',
+        'user_email',
     ];
     /**
      * @param [*] 判斷是否存在使用者
@@ -25,11 +26,28 @@ class UserModel extends Model
      */
     public function isUser($user_account)
     {
-       $result =  $this->where('user_account', $user_account)->first();
-       if($result){
+        $result =  $this->where('user_account', $user_account)->first();
+        if ($result) {
             return true;
-       }else{
+        } else {
             return false;
-       }
+        }
+    }
+
+    public function insertRegister($data)
+    {
+        $request = [
+            'user_account' => $data['user_account'],
+            'user_password' => sha1($data['user_password']),
+            'user_name' => $data['user_name'],
+            'user_gender' => $data['user_gender'],
+            'user_phone' => $data['user_phone'],
+            'user_email' => $data['user_email'],
+        ];
+        if ($this->save($request)) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
