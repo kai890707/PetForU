@@ -26,7 +26,7 @@
                     <form id="login-form">
                         <div class="form-group">
                             <!-- <label for="exampleInputEmail1" class="h4  text-center">帳號</label> -->
-                            <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"  name="user_account" aria-describedby="emailHelp" placeholder="輸入您的帳號">
+                            <input type="text" class="form-control form-control-lg" id="exampleInputEmail1"  name="user_account" aria-describedby="emailHelp" placeholder="輸入您的帳號">
                             <small id="emailHelp" class="form-text text-muted">*我們永遠不會跟他人分享您的資訊</small>
                         </div>
                         <div class="form-group">

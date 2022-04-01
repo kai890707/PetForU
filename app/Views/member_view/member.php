@@ -15,6 +15,36 @@
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
     <script>
+        var UserFun = {
+            drawUserInfo:(data)=>{
+           
+                if(data.user_gender == "male"){
+                    data.user_gender = "男"
+                }else if(data.user_gender == "female"){
+                    data.user_gender = "女"
+                }else{
+                    data.user_gender = "不願透漏"
+                }
+                $('#user_email').text(data.user_email);
+                $('#show_name').text(data.user_name);
+                $('#profile_username').text(data.user_name);
+                $('#name_input').val(data.user_name);
+                $('#show_phone').text(data.user_phone);
+                $('#phone_input').val(data.user_phone);
+                $("#user_gender").text(data.user_gender);
+                $("#preview").attr('src',`${BaseLib.base_Url}/public${data.user_photo}`);
+                $("#profile_photo").attr('src',`${BaseLib.base_Url}/public${data.user_photo}`);
+            }
+        }
+        $(document).ready(()=>{
+            BaseLib.Get("/public/userInfo").then(
+                (res)=>{
+                    UserFun.drawUserInfo(res.data);
+                },
+                (err)=>{
+                    console.log(err);
+                })
+        })
         $(document).on("click", ".browse", function() {
             var file = $(this).parents().find(".file");
             file.trigger("click");
@@ -60,6 +90,12 @@
             $('#name_save').addClass('d-none');
             $('#show_name').removeClass('d-none');
             $("#name_change").removeClass('d-none');
+            if($('#name_input').val().replace(/(^s*)|(s*$)/g, "").length !==0){
+                $('#show_name').text($('#name_input').val());
+            }else{
+                $('#name_input').val($('#show_name').text());
+            }
+          
         })
         $('#phone_change').click(()=>{
             $('#phone_input').removeClass('d-none');
@@ -72,7 +108,31 @@
             $('#phone_input').addClass('d-none');
             $('#phone_save').addClass('d-none');
             $('#show_phone').removeClass('d-none');
-            $("#phonename_change").removeClass('d-none');
+            $("#phone_change").removeClass('d-none');
+            if($('#phone_input').val().replace(/(^s*)|(s*$)/g, "").length !==0){
+                $('#show_phone').text($('#phone_input').val());
+            }else{
+                $('#phone_input').val($('#show_phone').text());
+            }
+        })
+          /**
+         * 個人資訊修改
+         */
+        $("form[id='updateUserInfo-form']").submit(function(e) {
+            e.preventDefault();
+            var formData = new FormData(document.getElementById('updateUserInfo-form'));
+            BaseLib.Post("/public/updateUserData",formData).then(
+                (res)=>{
+                    BaseLib.ResponseCheck(res).then(()=>{
+                        if(res.status =="success"){
+                            window.location.reload();
+                        }
+                    })
+                    
+                },
+                (err)=>{
+                    console.log(err);
+                })
         })
         /**
          * 修改密碼
@@ -80,7 +140,7 @@
         $("form[id='change-password-form']").submit(function(e) {
             e.preventDefault();
             var formData = new FormData(document.getElementById('change-password-form'));
-            // if (checkRegister(formData)) return;
+            if (checkRegister(formData)) return;
             BaseLib.Post("/public/rePassword",formData).then(
                 (res)=>{
                     BaseLib.ResponseCheck(res).then(()=>{
@@ -94,6 +154,7 @@
                     console.log(err);
                 })
         })
+      
         /**
          * 刊登寵物
          */
@@ -103,10 +164,10 @@
             BaseLib.Post("/public/createPublish",formData).then(
                 (res)=>{
                     BaseLib.ResponseCheck(res).then(()=>{
-                        // if(res.status =="success"){
-                        //     window.location=BaseLib.base_Url+"/public/login"
-                        // }
-                        console.log(res);
+                        if(res.status =="success"){
+                            window.location.reload();
+                        }
+                      
                     })
                     
                 },
@@ -115,7 +176,7 @@
                 })
         })
         function checkRegister(formData) {
-            if(formData.get('user_password')!== formData.get('user_repassword')){
+            if(formData.get('updatePassword')!== formData.get('updatePassword2')){
                 Swal.fire(
                     '輸入錯誤!',
                     '二次輸入的密碼不符合!',
@@ -123,20 +184,12 @@
                 )
                 return true;
             }
-            if(formData.get('user_password').length<=6){
+            if(formData.get('updatePassword').length<=6){
                 Swal.fire(
                     '提醒!',
                     '密碼必須大於6個英文字!',
                     'info'
                 )
-                return true;
-            }
-            if(!Number(formData.get('user_phone'))){
-                Swal.fire(
-                    '提醒!',
-                    '電話號碼必須為數字!',
-                    'info'
-                ) 
                 return true;
             }
             return false;

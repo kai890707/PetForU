@@ -7,19 +7,19 @@
         <div class="form-group row">
             <label for="before_pass" class="col-sm-5 col-form-label">輸入原有密碼</label>
             <div class="col-sm-7">
-                <input type="password" class="form-control" id="before_pass" placeholder="Password">
+                <input type="password" class="form-control" id="before_pass" name="user_password" placeholder="Password">
             </div>
         </div>
         <div class="form-group row">
             <label for="after_pass" class="col-sm-5 col-form-label">輸入新密碼</label>
             <div class="col-sm-7">
-                <input type="password" class="form-control" id="after_pass" placeholder="Password">
+                <input type="password" class="form-control" id="after_pass" name="updatePassword" placeholder="Password">
             </div>
         </div>
         <div class="form-group row">
             <label for="after_pass_again" class="col-sm-5 col-form-label">再次輸入新密碼</label>
             <div class="col-sm-7">
-            <input type="password" class="form-control" id="after_pass_again" placeholder="Password">
+            <input type="password" class="form-control" id="after_pass_again"name="updatePassword2" placeholder="Password">
             </div>
         </div>
         <div class="form-group row m-1">

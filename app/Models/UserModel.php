@@ -33,6 +33,17 @@ class UserModel extends Model
             return false;
         }
     }
+    /**
+     * @param [*] 取得使用者資訊
+     */
+    public function getUserInfo()
+    {
+        $wantGet = 
+            "user_email,user_name,user_phone,user_gender,user_photo"
+        ;
+        $response =  $this->select($wantGet)->where("user_id",session()->get('user_id'))->first();
+        return $response;
+    }
 
     public function insertRegister($data)
     {
@@ -43,6 +54,7 @@ class UserModel extends Model
             'user_gender' => $data['user_gender'],
             'user_phone' => $data['user_phone'],
             'user_email' => $data['user_email'],
+            'user_photo' => "/UserImage/user.png",
         ];
         if ($this->save($request)) {
             return true;
@@ -54,9 +66,9 @@ class UserModel extends Model
     public function updateUserInformation($user_id, $data)
     {
         $request = [
-            'user_gender' => $data['user_gender'],
+            'user_name' => $data['user_gender'],
+            'user_phone' => $data['user_phone'],
             'user_photo' => $data['user_photo'],
-            'user_email' => $data['user_email'],
         ];
         if ($this->update($user_id, $request)) {
             return true;

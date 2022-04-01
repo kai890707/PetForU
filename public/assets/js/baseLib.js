@@ -22,8 +22,18 @@ var BaseLib = {
 			.fail((err) => reject(err));
 		});
 	},
-    Get:()=>{
-
+    Get:(url)=>{
+		return new Promise((reslove, reject) => {
+			$.ajax({
+				type: "GET",
+				url: BaseLib.base_Url + url,
+				dataType: "json",
+				processData: false,
+				contentType : false,
+			})
+			.done((res) => reslove(res))
+			.fail((err) => reject(err));
+		});
     },
 	ResponseCheck:(responseData)=>{
 		if(responseData.status == "success"){

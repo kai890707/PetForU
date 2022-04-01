@@ -21,9 +21,9 @@
             <div class="col-3">
                 <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <div class="row mb-4">
-                        <div class="col-md-3 col-12 img-container"><img class="rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"data-holder-rendered="true" ></div>
+                        <div class="col-md-3 col-12 img-container"><img id="profile_photo" class="rounded-circle z-depth-2" alt="100x100" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(31).jpg"data-holder-rendered="true" ></div>
                         <div class="col-md-9 col-12 user_profile">
-                            <div class="username">123</div>
+                            <div class="username" id="profile_username">123</div>
                             <div>
                                 
                             </div>

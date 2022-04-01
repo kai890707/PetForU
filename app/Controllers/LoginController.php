@@ -19,14 +19,14 @@ class LoginController extends BaseController
         $session->start();
         $session = session();
         $user_account = $this->request->getPostGet('user_account');
-        $user_password = $this->request->getPostGet('user_passowrd');
-        $model = new UserModel();
+        $user_password = $this->request->getPostGet('user_password');
+        // $model = new UserModel();
         $data = [
             'user_account' => $user_account,
             'user_password' => $user_password,
         ];
-        // echo sha1($user_password);
-        $loginAns = $model->where('user_account', $user_account)->where('user_password', sha1($user_password))->first();
+        // echo sha1($user_password);   
+        $loginAns = $this->model->where('user_account', $user_account)->where('user_password', sha1($user_password))->first();
         // return json_encode($loginAns);
         if ($loginAns) {
             $session->set('user_id', $loginAns['user_id']);

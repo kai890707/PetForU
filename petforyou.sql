@@ -6579,7 +6579,6 @@ INSERT INTO `published` (`published_id`, `published_name`, `published_kind`, `pu
 CREATE TABLE `user` (
   `user_id` int(11) NOT NULL,
   `user_account` varchar(20) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `user_email` varchar(50) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_password` varchar(1000) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_gender` varchar(10) COLLATE utf8mb4_unicode_ci NOT NULL,

@@ -21,7 +21,7 @@ class UserController extends BaseController
         if ($data['user_photo'] != '') {
             if ($data['user_photo']->isValid() && !$data['user_photo']->hasMoved()) {
                 $imageName = $data['user_photo']->getRandoName();
-                $data['user_photo']->move('Image/', $imageName);
+                $data['user_photo']->move('userImage/', $imageName);
                 $data['user_photo'] = $imageName;
             }
         }
@@ -49,7 +49,25 @@ class UserController extends BaseController
                 return json_encode(['status' => 'fail', 'message' => '修改密碼失敗']);
             }
         } else {
-            return json_encode(['status' => 'error', 'message' => '原密碼輸入錯誤']);
+            return json_encode(['status' => 'fail', 'message' => '原密碼輸入錯誤']);
         }
+    }
+    public function getUserInfo()
+    {
+        $info = $this->model->getUserInfo();
+        if($info){
+            $response = [
+                'status' => 'success',
+                'message' => "get Ok",
+                'data'=>$info
+            ];
+        }else{
+            $response = [
+                'status' => 'fail',
+                'message' => "data is null",
+            ];
+        }
+         
+        return $this->response->setJSON($response);
     }
 }
