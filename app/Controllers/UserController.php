@@ -71,13 +71,24 @@ class UserController extends BaseController
             $updatePasswordAns = $this->model->update($user_id, $data);
             if ($updatePasswordAns) {
                 $this->session->destroy();
-                return json_encode(['status' => 'success', 'message' => '修改密碼成功，請重新登入']);
+                $response =  [
+                    'status' => 'success', 
+                    'message' => '修改密碼成功，請重新登入'
+                ];
             } else {
-                return json_encode(['status' => 'fail', 'message' => '修改密碼失敗']);
+                $response =  [
+                    'status' => 'fail', 
+                    'message' => '修改密碼失敗'
+                ];
             }
         } else {
-            return json_encode(['status' => 'fail', 'message' => '原密碼輸入錯誤']);
+            $response =  [
+                'status' => 'fail', 
+                'message' => '原密碼輸入錯誤'
+            ];
         }
+
+        return $this->response->setJSON($response); 
     }
     public function getUserInfo()
     {

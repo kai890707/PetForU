@@ -10,6 +10,8 @@ class PetController extends BaseController
     protected $model;
     public function __construct()
     {
+        $this->session = \Config\Services::session();
+        $this->session->start();
         $this->model = new PetModel();
     }
 
@@ -25,7 +27,6 @@ class PetController extends BaseController
     {
       $data = $this->request->getVar();
       $dataArray = array();
-      
         $nameFind = array(
             'dog' => '狗',
             'cat' => '貓',
@@ -72,4 +73,6 @@ class PetController extends BaseController
       ];
       echo view('find_view/find', $data);
     }
+
+   
 }
