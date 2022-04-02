@@ -12,10 +12,10 @@
 // Pager language settings
 return [
     'pageNavigation'         => 'Page navigation',
-    'first'                  => 'First',
-    'previous'               => 'Previous',
-    'next'                   => 'Next',
-    'last'                   => 'Last',
+    'first'                  => '第一頁',
+    'previous'               => '上一頁',
+    'next'                   => '下一頁',
+    'last'                   => '最後一頁',
     'older'                  => 'Older',
     'newer'                  => 'Newer',
     'invalidTemplate'        => '{0} is not a valid Pager template.',

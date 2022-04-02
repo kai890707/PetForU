@@ -50,13 +50,12 @@ $routes->post('rePassword', 'UserController::updateUserPassword', ["filter" => "
 $routes->post('/register', 'RegisterController::creatRegister'); //checked
 
 // Pet
-$routes->post('/allPet', 'PetController::loadAllData');
-$routes->post('/selectPet', 'PetController::selectPetData');
-
+$routes->get('/allPet', 'PetController::loadAllData');
+$routes->get('/selectPet', 'PetController::selectPetData');
 //User Data
 $routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
 $routes->get('/userInfo', 'UserController::getUserInfo'); //取得使用者資料 checked
-$routes->post('/updateUserData', 'UserController::updateUserData');//更新使用者資料 
+$routes->post('/updateUserData', 'UserController::updateUserData');//更新使用者資料  checked
 // Published
 $routes->post('/createPublish', 'PublishedController::createPublish'); //修改個人圖片測試api
 

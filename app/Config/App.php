@@ -36,7 +36,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $indexPage = 'index.php';
+    public $indexPage = 'public'; //外部訪問 把index.php改為public
 
     /**
      * --------------------------------------------------------------------------

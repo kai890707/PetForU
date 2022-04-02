@@ -31,9 +31,18 @@ class PetModel extends Model
         'pet_phone',
         'city_id',
     ];
-
+    /**
+     * @param [*] 透過id select 流浪動物資訊
+     * @param mixed $id [動物id]
+     */
+    public function selectPetDataById($id)
+    {
+        $r = $this->where('pet_id',$id)->first();
+        return $r;
+    }
     public function selectPetData()
     {
         # code...
     }
+
 }

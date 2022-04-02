@@ -34,6 +34,33 @@
                 $("#user_gender").text(data.user_gender);
                 $("#preview").attr('src',`${BaseLib.base_Url}/public${data.user_photo}`);
                 $("#profile_photo").attr('src',`${BaseLib.base_Url}/public${data.user_photo}`);
+            },
+            checkUpdateForm:(data)=>{
+                if(data.get('name_input').length === 0){
+                    Swal.fire(
+                        '輸入錯誤!',
+                        '使用者名稱不得為空!',
+                        'info'
+                        )
+                    return true;
+                }
+                if(data.get('phone_input').length === 0){
+                    Swal.fire(
+                        '輸入錯誤!',
+                        '手機號碼不得為空!',
+                        'info'
+                        )
+                    return true;
+                }
+                if(!Number(data.get('phone_input'))){
+                    Swal.fire(
+                        '輸入錯誤!',
+                        '手機號碼必須為數字!',
+                        'info'
+                        )
+                    return true;
+                }
+                return false;
             }
         }
         $(document).ready(()=>{
@@ -121,6 +148,7 @@
         $("form[id='updateUserInfo-form']").submit(function(e) {
             e.preventDefault();
             var formData = new FormData(document.getElementById('updateUserInfo-form'));
+            if (UserFun.checkUpdateForm((formData))) return;
             BaseLib.Post("/public/updateUserData",formData).then(
                 (res)=>{
                     BaseLib.ResponseCheck(res).then(()=>{

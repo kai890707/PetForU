@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="<?php echo base_url('public')?>/assets/css/find_view.css">
 <?= $this->endSection() ?>
 <?= $this->section('main') ?>
+ 
     <?= $this->include('base_view/nav') ?>
     <?= $this->include('find_view/find_main') ?>
     <?= $this->include('base_view/footer') ?>
@@ -31,6 +32,29 @@
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
    <script>
+       var FindPetFun={
+            redirect:(id)=>{
+                window.location=BaseLib.base_Url+`/public/pet/${id}`;
+            }
+       }
+       /** 條件選擇流浪動物 */
+    //    $("form[id='selectPet-form']").submit(function(e) {
+    //         e.preventDefault();
+    //         var formData = new FormData(document.getElementById('selectPet-form'));
+    //         BaseLib.Get("/public/selectPet",formData).then(
+    //             (res)=>{
+    //                 // BaseLib.ResponseCheck(res).then(()=>{
+    //                 //     if(res.status =="success"){
+    //                 //         window.location.reload();
+    //                 //     }
+    //                 // })
+    //                 console.log(res);
+                    
+    //             },
+    //             (err)=>{
+    //                 console.log(err);
+    //             })
+    //     })
        let mybutton = document.getElementById("btn-back-to-top");
         window.onscroll = function () {
             scrollFunction();
@@ -52,5 +76,6 @@
             // document.documentElement.scrollTop = 0;
             $('html,body').animate({ scrollTop: 0 }, 'slow');
         }
+     
    </script>
 <?= $this->endSection() ?>

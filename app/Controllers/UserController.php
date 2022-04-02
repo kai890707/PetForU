@@ -16,30 +16,47 @@ class UserController extends BaseController
     }
     public function updateUserData()
     {
+        $updateData=[];
         $data = $this->request->getVar();
         $user_id = $this->session->get('user_id');
-        $user_photo = $this->request->getFile('user_photo');
+        $user_photo = $this->request->getFile('img');
         $re_user_photo = $user_photo->getName();
-        $temp = explode(".",$re_user_photo);
-        $newfilename = round(microtime(true)) . '.' . end($temp);
-
-        if($user_photo->move("userImage", $newfilename)){
-            $ImageData = 'userImage/'.$newfilename;
+        if($re_user_photo == ""){
+            //圖片無變更
+            $updateData = [
+                'user_name' => $data['name_input'],
+                'user_phone' => $data['phone_input'],
+            ];
         }else{
-            $ImageData = '';
+            $temp = explode(".",$re_user_photo);
+            $newfilename = round(microtime(true)) . '.' . end($temp);
+            if($user_photo->move("UserImage", $newfilename)){
+                $ImageData = "/UserImage"."/".$newfilename;
+                $updateData = [
+                    'user_name' => $data['name_input'],
+                    'user_phone' => $data['phone_input'],
+                    'user_photo' => $ImageData,
+                ];
+            }else{
+                $response = [
+                    'status' => 'fail',
+                    'message' => "圖片新增失敗",
+                ]; 
+                return $this->response->setJSON($response);
+            }
         }
-        
-        $updateData = [
-            'user_name' => $data['user_name'],
-            'user_phone' => $data['user_phone'],
-            'user_photo' => $ImageData,
-        ];
-
         if ($this->model->updateUserInformation($user_id, $updateData)) {
-            return json_encode(['status' => 'success', 'message' => '資料修改成功']);
+            $response = [
+                'status' => 'success',
+                'message' => "資料修改成功",
+            ]; 
         } else {
-            return json_encode(['status' => 'fail', 'message' => '資料修改失敗']);
+            $response = [
+                'status' => 'fail',
+                'message' => "資料修改失敗",
+            ]; 
         }
+        return $this->response->setJSON($response); 
     }
     public function updateUserPassword()
     {

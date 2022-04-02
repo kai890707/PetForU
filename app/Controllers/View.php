@@ -4,6 +4,11 @@ namespace App\Controllers;
 
 class View extends BaseController
 {
+    protected $pet_model;
+    public function __construct()
+    {
+        $this->pet_model =new \App\Models\PetModel();
+    }
     public function index()
     {
         $data = [
@@ -27,17 +32,29 @@ class View extends BaseController
     }
     public function find_view()
     {
+        //分頁的字在 system\Language\en\Pager.php 更改
         $data = [
             'page_title' => '找浪浪',
+            'pets' => $this->pet_model->paginate(12),
+            'pager' => $this->pet_model->pager
         ];
         echo view('find_view/find', $data);
     }
     public function pet_view($id = null)
     {
-        $data = [
-            'page_title' => '浪浪資訊',
-        ];
-        echo view('pet_view/pet', $data);
+        $petinfo = $this->pet_model->selectPetDataById($id);
+        if($petinfo){
+            $data = [
+                'page_title' => '浪浪資訊',
+                'pet_info'=>$petinfo
+               
+            ];
+            
+            echo view('pet_view/pet', $data);
+        }else{
+            echo view('404');
+        }
+        
     }
     public function person_view()
     {

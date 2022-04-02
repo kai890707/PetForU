@@ -65,11 +65,6 @@ class UserModel extends Model
 
     public function updateUserInformation($user_id, $data)
     {
-        // $request = [
-        //     'user_name' => $data['user_gender'],
-        //     'user_phone' => $data['user_phone'],
-        //     'user_photo' => $data['user_photo'],
-        // ];
         if ($this->update($user_id, $data)) {
             return true;
         } else {
