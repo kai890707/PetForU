@@ -7,6 +7,7 @@
         <div class="col d-flex justify-content-end align-items-end">
             <button type="button" class="btn btn-outline-success"  data-toggle="modal" data-target="#exampleModalCenter">立即刊登</button>
             <?= $this->include('member_view/component/post_modal') ?>
+            <?= $this->include('member_view/component/edit_modal') ?>
         </div>
         
     </div>
@@ -49,7 +50,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-12 mt-sm-2 border-left">
                 <div class="row justify-content-start align-items-center mb-2">
-                    <div class="col mb-2 "><button class="btn btn-outline-info">編輯資料</button></div>
+                    <div class="col mb-2 "><button class="btn btn-outline-info"  data-toggle="modal" data-target="#editPostModal">編輯資料</button></div>
                     <div class="col  mb-2 "><button class="btn btn-outline-danger">刪除</button></div>
                 </div>
                 

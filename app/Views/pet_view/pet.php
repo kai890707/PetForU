@@ -11,18 +11,26 @@
     
 <?= $this->endSection() ?>
 <?= $this->section('js') ?>
+<?php var_dump($pet_info) ?>
     <?= $this->include('base_view/js') ?>
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL4tW2ZUt47XcDbcJdhMqc_56hLgkCA2I&callback=initMap"></script> -->
     <script>
-          let map;
+        // $('document').ready(()=>{
+        //     BaseLib.GetGoogle('https://maps.googleapis.com/maps/api/geocode/json?address=%E5%8F%B0%E7%81%A3%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E5%BA%B7%E5%AE%9A%E8%B7%AF190%E8%99%9F&key=AIzaSyCIYa2mDtnA-YhijYbEp6mpicog7uWjQ1U')
+        //     .then((res)=>{
+        //         console.log(res.geometry);
+        //     },(err)=>{
 
-function initMap() {
-  map = new google.maps.Map(document.getElementById("map"), {
-    center: { lat: -34.397, lng: 150.644 },
-    zoom: 8,
-  });
-}
+        //     })
+        // })
+        let map;
+        function initMap() {
+        map = new google.maps.Map(document.getElementById("map"), {
+            center: { lat: -34.397, lng: 150.644 },
+            zoom: 8,
+        });
+        }
     </script>
 <?= $this->endSection() ?>

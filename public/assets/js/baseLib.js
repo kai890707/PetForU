@@ -35,6 +35,19 @@ var BaseLib = {
 			.fail((err) => reject(err));
 		});
     },
+	GetGoogle:(url)=>{
+		return new Promise((reslove, reject) => {
+			$.ajax({
+				type: "GET",
+				url: url,
+				dataType: "json",
+				processData: false,
+				contentType : false,
+			})
+			.done((res) => reslove(res))
+			.fail((err) => reject(err));
+		});
+    },
 	ResponseCheck:(responseData)=>{
 		if(responseData.status == "success"){
 			return Swal.fire(

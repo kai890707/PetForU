@@ -47,7 +47,6 @@ class View extends BaseController
             $data = [
                 'page_title' => '浪浪資訊',
                 'pet_info'=>$petinfo
-               
             ];
             
             echo view('pet_view/pet', $data);
