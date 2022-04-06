@@ -24,17 +24,25 @@ class ColletController extends BaseController
             'user_id' => $user_id,
             'pet_id' => $pet_id,
         ];
-        if($this->model->save($data)){
+        if($user_id == null || $user_id ==""){
             $response = [
-                'status' => 'success',
-                'message' => "收藏成功",
+                'status'=>'fail',
+                'message'=>'您尚未登入，請登入後再進行操作!'
             ];
         }else{
-            $response = [
-                'status' => 'fail',
-                'message' => "收藏失敗",
-            ];
+            if($this->model->save($data)){
+                $response = [
+                    'status' => 'success',
+                    'message' => "收藏成功",
+                ];
+            }else{
+                $response = [
+                    'status' => 'fail',
+                    'message' => "收藏失敗",
+                ];
+            }
         }
+        
         return $this->response->setJSON($response);
     }
 
@@ -52,10 +60,10 @@ class ColletController extends BaseController
 
     public function deletePetCollet()
     {
-        // $user_id = $this->session->get('user_id');
-        $collet_id = $this->request->getPostGet('collet_id');
-        $result = $this->model->where('collet_id',$collet_id)->delete();
-        // $result = $this->model->where('collet_id',$collet_id)->findAll();
+        $user_id = $this->session->get('user_id');
+        $pet_id = $this->request->getPostGet('pet_id');
+        $result = $this->model->where('user_id',$user_id)->where('pet_id',$pet_id)->delete();
+        
         if($result){
             $response = [
                 'status' => 'success',

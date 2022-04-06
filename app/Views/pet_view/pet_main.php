@@ -23,7 +23,14 @@
                             <img class="img-fluid img-thumbnail" src="<?php echo $pet_info['pet_photo'] ?>" alt="" width="400px" height="300px">
                         </div>
                         <div class="blog_details col-lg-6 col-md-6 col-12 p-4">
-                            <h2 class="d-flex justify-content-between"> <span>動物資訊</span>  <button class="btn btn-outline-success">加入收藏</button></h2>
+                            
+                            <h2 class="d-flex justify-content-between"> <span>動物資訊</span>  
+                            <?php if($isCollect){?>
+                            <button class="btn btn-outline-danger" onclick="CollectFun.remove(<?php echo$pet_info['pet_id']?>)">刪除收藏</button>
+                            <?php }else{?>
+                            <button class="btn btn-outline-success" onclick="CollectFun.add(<?php echo$pet_info['pet_id']?>)">加入收藏</button>
+                            <?php }?>
+                            </h2>
                             <p class="excert">
                                 <table class="table table-borderless">
                                     <thead class="table-warning">

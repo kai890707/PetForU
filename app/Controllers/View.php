@@ -8,6 +8,7 @@ class View extends BaseController
     public function __construct()
     {
         $this->pet_model =new \App\Models\PetModel();
+        $this->collet_model =new \App\Models\ColletModel();
     }
     public function index()
     {
@@ -42,11 +43,14 @@ class View extends BaseController
     }
     public function pet_view($id = null)
     {
+        $user_id = session()->get('user_id');
         $petinfo = $this->pet_model->selectPetDataById($id);
+        $isCollect = $this->collet_model->isCollect($user_id,$id);
         if($petinfo){
             $data = [
                 'page_title' => '浪浪資訊',
-                'pet_info'=>$petinfo
+                'pet_info'=>$petinfo,
+                'isCollect'=>$isCollect
             ];
             
             echo view('pet_view/pet', $data);

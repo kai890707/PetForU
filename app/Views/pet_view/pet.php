@@ -11,7 +11,7 @@
     
 <?= $this->endSection() ?>
 <?= $this->section('js') ?>
-<?php var_dump($pet_info) ?>
+
     <?= $this->include('base_view/js') ?>
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
@@ -31,6 +31,36 @@
             center: { lat: -34.397, lng: 150.644 },
             zoom: 8,
         });
+        }
+        var CollectFun ={
+            add:(id)=>{
+                data = new FormData();
+                data.append("pet_id",id);
+                BaseLib.Post("/public/insertCollet",data).then(
+                (res)=>{
+                    
+                    BaseLib.ResponseCheck(res).then(()=>{
+                        window.location.reload();
+                    })
+                },
+                (err)=>{
+                    console.log(err);
+                })
+            },
+            remove:(id)=>{
+                data = new FormData();
+                data.append("pet_id",id);
+                BaseLib.Post("/public/deleteCollet",data).then(
+                (res)=>{
+                    
+                    BaseLib.ResponseCheck(res).then(()=>{
+                        window.location.reload();
+                    })
+                },
+                (err)=>{
+                    console.log(err);
+                })
+            }
         }
     </script>
 <?= $this->endSection() ?>

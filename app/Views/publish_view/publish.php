@@ -36,7 +36,7 @@
 <?= $this->section('custom_js') ?>
     <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL4tW2ZUt47XcDbcJdhMqc_56hLgkCA2I&callback=initMap"></script> -->
     <script>
-
+        
         let mybutton = document.getElementById("btn-back-to-top");
         window.onscroll = function () {
             scrollFunction();
