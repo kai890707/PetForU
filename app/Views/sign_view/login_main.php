@@ -34,7 +34,7 @@
                             <input type="password" class="form-control form-control-lg" id="exampleInputPassword1"name="user_password" placeholder="輸入您的密碼">
                         </div>
                         <div class="form-group d-flex justify-content-center mb-4 mt-4">
-                           <a href="#" >忘記帳號?</a>     
+                           <a href="<?php echo base_url('public/mail')?>" >忘記帳號?</a>     
                         </div>
                         <div class="form-group ">
                             <button  type="submit" class="genric-btn danger-border circle w-100 mb-4" style="font-size: 1.2em!important">登入</button>

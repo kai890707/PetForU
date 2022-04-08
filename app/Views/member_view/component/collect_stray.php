@@ -4,7 +4,7 @@
 </div>    
 
 <div class="p-4 row">
-    <div class="col-12  m-2 p-2" >
+    <div class="col-12  m-2 p-2" id="collectList">
         <div class="row mb-3 p-3 shadow rounded collect_content" >
             <div class="col-12">
                 <div class="row">

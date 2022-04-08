@@ -39,13 +39,14 @@ $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
 $routes->get('/person', 'View::person_view', ["filter" => "auth"]);
 $routes->get('/publish', 'View::publish_view');
+$routes->get('/mail', 'View::sendMail');
 //Login And Logout Route
 $routes->post('/login', 'LoginController::Login'); //checked
 $routes->get('/logout', 'LoginController::Logout'); //checked
 
 
-$routes->post('rePassword', 'UserController::updateUserPassword', ["filter" => "auth"]); //checked
-
+$routes->post('/rePassword', 'UserController::updateUserPassword', ["filter" => "auth"]); //checked
+$routes->post('/sendMail', 'UserController::sendMail'); //checked
 //Register Route
 $routes->post('/register', 'RegisterController::creatRegister'); //checked
 
@@ -53,18 +54,18 @@ $routes->post('/register', 'RegisterController::creatRegister'); //checked
 $routes->get('/allPet', 'PetController::loadAllData');
 $routes->get('/selectPet', 'PetController::selectPetData');
 //User Data
-$routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
-$routes->get('/userInfo', 'UserController::getUserInfo'); //取得使用者資料 checked
-$routes->post('/updateUserData', 'UserController::updateUserData');//更新使用者資料  checked
+$routes->post('/updatePhoto', 'UserController::updateUserPhoto', ["filter" => "auth"]); //修改個人圖片測試api
+$routes->get('/userInfo', 'UserController::getUserInfo', ["filter" => "auth"]); //取得使用者資料 checked
+$routes->post('/updateUserData', 'UserController::updateUserData', ["filter" => "auth"]);//更新使用者資料  checked
 // Published
-$routes->post('/createPublish', 'PublishedController::createPublish'); 
-$routes->post('/editPublish', 'PublishedController::editPublish'); 
-$routes->post('/deletePublish', 'PublishedController::deletePublish'); 
-$routes->post('/selectPublish', 'PublishedController::selectPublish'); 
+$routes->post('/createPublish', 'PublishedController::createPublish', ["filter" => "auth"]); 
+$routes->post('/editPublish', 'PublishedController::editPublish', ["filter" => "auth"]); 
+$routes->post('/deletePublish', 'PublishedController::deletePublish', ["filter" => "auth"]); 
+$routes->get('/selectPublish', 'PublishedController::selectPublish', ["filter" => "auth"]); 
 //Collet
-$routes->post('/insertCollet', 'ColletController::insertPetCollet');//搜尋寵物收藏
-$routes->post('/selectCollet', 'ColletController::selectPetCollet');//搜尋寵物收藏
-$routes->post('/deleteCollet', 'ColletController::deletePetCollet');//刪除寵物收藏
+$routes->post('/insertCollet', 'ColletController::insertPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
+$routes->get('/selectCollet', 'ColletController::selectPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
+$routes->post('/deleteCollet', 'ColletController::deletePetCollet', ["filter" => "auth"]);//刪除寵物收藏
 
 
 /*
