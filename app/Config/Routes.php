@@ -55,16 +55,18 @@ $routes->get('/selectPet', 'PetController::selectPetData');
 //User Data
 $routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
 $routes->get('/userInfo', 'UserController::getUserInfo'); //取得使用者資料 checked
-$routes->post('/updateUserData', 'UserController::updateUserData');//更新使用者資料  checked
+$routes->post('/updateUserData', 'UserController::updateUserData'); //更新使用者資料  checked
 // Published
-$routes->post('/createPublish', 'PublishedController::createPublish'); 
-$routes->post('/editPublish', 'PublishedController::editPublish'); 
-$routes->post('/deletePublish', 'PublishedController::deletePublish'); 
-$routes->post('/selectPublish', 'PublishedController::selectPublish'); 
+$routes->post('/createPublish', 'PublishedController::createPublish');
+$routes->post('/editPublish', 'PublishedController::editPublish');
+$routes->post('/deletePublish', 'PublishedController::deletePublish');
+$routes->post('/selectPublish', 'PublishedController::selectPublish');
 //Collet
-$routes->post('/insertCollet', 'ColletController::insertPetCollet');//搜尋寵物收藏
-$routes->post('/selectCollet', 'ColletController::selectPetCollet');//搜尋寵物收藏
-$routes->post('/deleteCollet', 'ColletController::deletePetCollet');//刪除寵物收藏
+$routes->post('/insertCollet', 'ColletController::insertPetCollet'); //搜尋寵物收藏
+$routes->post('/selectCollet', 'ColletController::selectPetCollet'); //搜尋寵物收藏
+$routes->post('/deleteCollet', 'ColletController::deletePetCollet'); //刪除寵物收藏
+//City
+$routes->get('/getCity', 'CityController::getCity');
 
 
 /*

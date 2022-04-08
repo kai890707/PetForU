@@ -38,10 +38,9 @@ class UserModel extends Model
      */
     public function getUserInfo()
     {
-        $wantGet = 
-            "user_email,user_name,user_phone,user_gender,user_photo"
-        ;
-        $response =  $this->select($wantGet)->where("user_id",session()->get('user_id'))->first();
+        $wantGet =
+            "user_email,user_name,user_phone,user_gender,user_photo";
+        $response =  $this->select($wantGet)->where("user_id", session()->get('user_id'))->first();
         return $response;
     }
 

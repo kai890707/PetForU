@@ -14,10 +14,10 @@ class PublishedController extends BaseController
         $this->session = \Config\Services::session();
         $this->session->start();
     }
+
     public function createPublish()
     {
-      
-        /** 獲取表單資料 start*/ 
+        /** 獲取表單資料 start*/
         $publish_name = $this->request->getPostGet('publish_name');
         $publish_kind = $this->request->getPostGet('publish_kind');
         $publish_variet = $this->request->getPostGet('publish_variet');
@@ -31,10 +31,10 @@ class PublishedController extends BaseController
         $publish_photo = $this->request->getFile('publish_photo');
         $re_publish_photo = $publish_photo->getName();
         $user_id = $this->session->get('user_id');
+        $city_id = $this->session->get('city_id');
         $getDate = date("Y-m-d");
-         /** 獲取表單資料 end*/ 
+        /** 獲取表單資料 end*/
         $re_publish_photo = $publish_photo->getName();
-
         $dataArray = array();
         array_push(
             $dataArray,
@@ -55,10 +55,10 @@ class PublishedController extends BaseController
             }
         }
 
-        $temp = explode(".",$re_publish_photo);
+        $temp = explode(".", $re_publish_photo);
         $newfilename = round(microtime(true)) . '.' . end($temp);
-        
-        if($re_publish_photo == ""){
+
+        if ($re_publish_photo == "") {
             $data = [
                 'published_name' => $dataArray[0],
                 'published_kind' => $dataArray[1],
@@ -69,16 +69,17 @@ class PublishedController extends BaseController
                 'published_age' => $dataArray[6],
                 'published_sterilization' => $dataArray[7],
                 'published_bacterin' => $dataArray[8],
-                'published_status' =>"無",
+                'published_status' => "無",
                 'published_remark' => $dataArray[9],
                 'published_createDate' => $getDate,
                 'user_id' => $user_id,
+                'city_id' => $city_id,
             ];
-        }else{
-            $temp = explode(".",$re_publish_photo);
+        } else {
+            $temp = explode(".", $re_publish_photo);
             $newfilename = round(microtime(true)) . '.' . end($temp);
-            if($publish_photo->move("Image", $newfilename)){
-                $ImageData = "image"."/".$newfilename;
+            if ($publish_photo->move("Image", $newfilename)) {
+                $ImageData = "image" . "/" . $newfilename;
                 $data = [
                     'published_name' => $dataArray[0],
                     'published_kind' => $dataArray[1],
@@ -89,21 +90,22 @@ class PublishedController extends BaseController
                     'published_age' => $dataArray[6],
                     'published_sterilization' => $dataArray[7],
                     'published_bacterin' => $dataArray[8],
-                    'published_status' =>"無",
+                    'published_status' => "無",
                     'published_remark' => $dataArray[9],
                     'published_photo' => $ImageData,
                     'published_createDate' => $getDate,
                     'user_id' => $user_id,
+                    'city_id' => $city_id,
                 ];
-            }else{
+            } else {
                 $response = [
                     'status' => 'fail',
                     'message' => "圖片新增失敗",
-                ]; 
+                ];
                 return $this->response->setJSON($response);
             }
         }
-        
+
         $result = $this->model->insert($data);
         if ($result) {
             $response = [
@@ -117,9 +119,6 @@ class PublishedController extends BaseController
             ];
         }
         return $this->response->setJSON($response);
-        
-           
-        
     }
     public function editPublish()
     {
@@ -135,6 +134,7 @@ class PublishedController extends BaseController
         $publish_bacterin = $this->request->getPostGet('publish_bacterin');
         $publish_remark = $this->request->getPostGet('publish_remark');
         $publish_photo = $this->request->getFile('publish_photo');
+        $city_id = $this->request->getPostGet('city_id');
         $re_publish_photo = $publish_photo->getName();
 
         $dataArray = array();
@@ -150,6 +150,7 @@ class PublishedController extends BaseController
             $publish_sterilization,
             $publish_bacterin,
             $publish_remark,
+            $city_id,
         );
         for ($i = 0; $i < count($dataArray); $i++) {
             if ($dataArray[$i] == '') {
@@ -157,7 +158,7 @@ class PublishedController extends BaseController
             }
         }
 
-        if($re_publish_photo == ""){
+        if ($re_publish_photo == "") {
             $data = [
                 'published_name' => $dataArray[0],
                 'published_kind' => $dataArray[1],
@@ -168,14 +169,14 @@ class PublishedController extends BaseController
                 'published_age' => $dataArray[6],
                 'published_sterilization' => $dataArray[7],
                 'published_bacterin' => $dataArray[8],
-                'published_status' =>"無",
+                'published_status' => "無",
                 'published_remark' => $dataArray[9],
             ];
-        }else{
-            $temp = explode(".",$re_publish_photo);
+        } else {
+            $temp = explode(".", $re_publish_photo);
             $newfilename = round(microtime(true)) . '.' . end($temp);
-            if($publish_photo->move("Image", $newfilename)){
-                $ImageData = "image"."/".$newfilename;
+            if ($publish_photo->move("Image", $newfilename)) {
+                $ImageData = "image" . "/" . $newfilename;
                 $data = [
                     'published_name' => $dataArray[0],
                     'published_kind' => $dataArray[1],
@@ -186,45 +187,45 @@ class PublishedController extends BaseController
                     'published_age' => $dataArray[6],
                     'published_sterilization' => $dataArray[7],
                     'published_bacterin' => $dataArray[8],
-                    'published_status' =>"無",
+                    'published_status' => "無",
                     'published_remark' => $dataArray[9],
                     'published_photo' => $ImageData,
+                    'city_id' => $city_id,
                 ];
-            }else{
+            } else {
                 $response = [
                     'status' => 'fail',
                     'message' => "圖片新增失敗",
-                ]; 
+                ];
                 return $this->response->setJSON($response);
             }
         }
-        
-        if($this->model->update($published_id, $data)){
+
+        if ($this->model->update($published_id, $data)) {
             $response = [
                 'status' => 'success',
                 'message' => "修改成功",
-            ]; 
-        }else{
+            ];
+        } else {
             $response = [
                 'status' => 'fail',
                 'message' => "修改失敗",
-            ]; 
+            ];
         }
         return $this->response->setJSON($response);
-
     }
     public function deletePublish()
     {
         $user_id = $this->session->get('user_id');
         $published_id = $this->request->getPostGet('published_id');
-        $result = $this->model->where('published_id',$published_id)->delete();
-        
-        if($result){
+        $result = $this->model->where('published_id', $published_id)->delete();
+
+        if ($result) {
             $response = [
                 'status' => 'success',
                 'message' => "刪除成功",
             ];
-        }else{
+        } else {
             $response = [
                 'status' => 'fail',
                 'message' => "刪除失敗",
@@ -236,7 +237,7 @@ class PublishedController extends BaseController
     public function selectPublish()
     {
         $user_id = $this->session->get('user_id');
-        $result = $this->model->where('user_id',$user_id)->findAll();
+        $result = $this->model->where('user_id', $user_id)->findAll();
         return $this->response->setJSON($result);
     }
 }

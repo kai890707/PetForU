@@ -23,5 +23,6 @@ class PublishedModel extends Model
         'published_photo',
         'published_createDate',
         'user_id',
+        'city_id',
     ];
 }
