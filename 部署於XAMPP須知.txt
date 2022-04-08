@@ -1,1 +1,7 @@
-部署於XAMPP上運行時，需更改php.ini檔，打開檔案後於空白處新增extension=intl即可!
+部署於XAMPP上運行時，需更改php.ini檔，
+1. 打開檔案後於空白處新增extension=intl
+2. 為了可以發布mail，須將 smtp_port 改為465 , 按CTRL+F 搜尋 smtp_port再更改
+3. 續第2點，進入專案內 app/Config/Email.php 將$SMTPUser 和 $SMTPPass 改為自己的google帳密，google帳密記得把安全性關掉
+	參考網址(https://support.google.com/accounts/answer/6010255?hl=zh-Hant#more-secure-apps&zippy=%2C%E5%A6%82%E6%9E%9C%E6%82%A8%E7%9A%84%E5%B8%B3%E6%88%B6%E9%96%8B%E5%95%9F%E4%BA%86%E4%BD%8E%E5%AE%89%E5%85%A8%E6%80%A7%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E5%AD%98%E5%8F%96%E6%AC%8A%2C%E6%9B%B4%E6%96%B0%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F%E6%88%96%E4%BD%9C%E6%A5%AD%E7%B3%BB%E7%B5%B1%2C%E4%BD%BF%E7%94%A8%E9%AB%98%E5%AE%89%E5%85%A8%E6%80%A7%E6%87%89%E7%94%A8%E7%A8%8B%E5%BC%8F)
+4. 續第3點，進入專案內 app/Controller/UserController.php ，找到sendMail 這個方法，然後將第123行的
+     $email->setFrom('your mail', 'PetForU.com'); 中的your mail改為自己的email 就完成了!

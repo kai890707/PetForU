@@ -5,10 +5,13 @@ namespace App\Controllers;
 class View extends BaseController
 {
     protected $pet_model;
+    protected $publish_model;
+    protected $collet_model;
     public function __construct()
     {
         $this->pet_model =new \App\Models\PetModel();
         $this->collet_model =new \App\Models\ColletModel();
+        $this->publish_model =new \App\Models\PublishedModel();
     }
     public function index()
     {
@@ -70,7 +73,17 @@ class View extends BaseController
     {
         $data = [
             'page_title' => '寵物媒合',
+            'pets' => $this->publish_model->paginate(12),
+            'pager' => $this->publish_model->pager
         ];
         echo view('publish_view/publish', $data);
+    }
+    public function sendMail()
+    {
+        $data = [
+            'page_title' => '找回密碼',
+
+        ];
+        echo view('sendMail', $data);
     }
 }

@@ -8,11 +8,13 @@ class UserController extends BaseController
 {
     protected $session;
     protected $model;
+    protected $email_conf;
     public function __construct()
     {
         $this->session = \Config\Services::session();
         $this->session->start();
         $this->model = new UserModel();
+        $this->email_conf = \Config\Services::email();
     }
     public function updateUserData()
     {
@@ -107,5 +109,48 @@ class UserController extends BaseController
         }
          
         return $this->response->setJSON($response);
+    }
+
+    public function sendMail()
+    {
+        $to = $this->request->getVar('mailTo');
+        $account = $this->request->getVar('account');
+        $isEmail =  $this->model->where('user_email',$to)->where('user_account',$account)->first();
+        if($isEmail){
+            $subject = "PetForU.com 找回密碼專信";
+            $email = \Config\Services::email();
+            $email->setTo($to);
+            $email->setFrom('your mail', 'PetForU.com');
+            $str="QWERTYUIOPASDFGHJKLZXCVBNM1234567890qwertyuiopasdfghjklzxcvbnm";
+            str_shuffle($str);
+            $new_password=sha1(substr(str_shuffle($str),26,10));
+            $changePassword =  $this->model->update($isEmail['user_id'],['user_password'=>sha1($new_password)]);
+            $message = "您好! 以下為您的新密碼,請登入後再進行密碼更改之動作。";
+            $message.="新密碼為 : $new_password";
+            $email->setSubject($subject);
+            $email->setMessage($message);
+            if ($email->send()) 
+            {
+                $response = [
+                    'status'=>'success',
+                    'message'=>'發送成功，請至您的信箱查看新密碼，即將為您跳轉至登入頁面'
+                ];
+            } 
+            else 
+            {
+                $response = [
+                    'status'=>'fail',
+                    'message'=>'信件發送失敗，請檢查您的email有無錯誤!'
+                ];
+            }
+        }else{
+            $response = [
+                'status'=>'fail',
+                'message'=>'信件發送失敗，請確認您是否有註冊此帳號或在別的帳號使用過此email!'
+            ];
+        }
+        return $this->response->setJSON($response);
+       
+       
     }
 }
