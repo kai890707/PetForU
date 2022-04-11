@@ -83,7 +83,10 @@ $routes->post('/insertCollet', 'ColletController::insertPetCollet', ["filter" =>
 $routes->get('/selectCollet', 'ColletController::selectPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
 $routes->post('/deleteCollet', 'ColletController::deletePetCollet', ["filter" => "auth"]);//刪除寵物收藏
 >>>>>>> f85ea23d98e907787325469939783e91020bc828
-
+//PublishCollect
+$routes->post('/insertCollet', 'PublishCollectController::insertPublishCollet', ["filter" => "auth"]);//新增刊登蒐藏
+$routes->get('/selectCollet', 'PublishCollectController::selectPublishCollet', ["filter" => "auth"]);//搜尋刊登蒐藏
+$routes->post('/deleteCollet', 'PublishCollectController::deletePublishCollet', ["filter" => "auth"]);//刪除寵物收藏
 
 /*
  * --------------------------------------------------------------------

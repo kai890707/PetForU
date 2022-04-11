@@ -47,7 +47,7 @@ class PublishCollectController extends BaseController
         return $this->response->setJSON($response);
     }
 
-    public function selectPetCollet()
+    public function selectPublishCollet()
     {
         $user_id = $this->session->get('user_id');
         $builder = $this->db->table('publishedcollect');
@@ -59,7 +59,7 @@ class PublishCollectController extends BaseController
         return $this->response->setJSON($query);
     }
 
-    public function deletePetCollet()
+    public function deletePublishCollet()
     {
         $user_id = $this->session->get('user_id');
         $p_collect_id = $this->request->getPostGet('p_collect_id');
