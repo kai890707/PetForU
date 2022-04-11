@@ -43,50 +43,37 @@ $routes->get('/mail', 'View::sendMail');
 //Login And Logout Route
 $routes->post('/login', 'LoginController::Login'); //checked
 $routes->get('/logout', 'LoginController::Logout'); //checked
-
-
-$routes->post('/rePassword', 'UserController::updateUserPassword', ["filter" => "auth"]); //checked
 $routes->post('/sendMail', 'UserController::sendMail'); //checked
-//Register Route
+
+//Register
 $routes->post('/register', 'RegisterController::creatRegister'); //checked
 
-// Pet
-$routes->get('/allPet', 'PetController::loadAllData');
-$routes->get('/selectPet', 'PetController::selectPetData');
-//User Data
-<<<<<<< HEAD
-$routes->post('/updatePhoto', 'UserController::updateUserPhoto'); //修改個人圖片測試api
-$routes->get('/userInfo', 'UserController::getUserInfo'); //取得使用者資料 checked
-$routes->post('/updateUserData', 'UserController::updateUserData'); //更新使用者資料  checked
-// Published
-$routes->post('/createPublish', 'PublishedController::createPublish');
-$routes->post('/editPublish', 'PublishedController::editPublish');
-$routes->post('/deletePublish', 'PublishedController::deletePublish');
-$routes->post('/selectPublish', 'PublishedController::selectPublish');
-//Collet
-$routes->post('/insertCollet', 'ColletController::insertPetCollet'); //搜尋寵物收藏
-$routes->post('/selectCollet', 'ColletController::selectPetCollet'); //搜尋寵物收藏
-$routes->post('/deleteCollet', 'ColletController::deletePetCollet'); //刪除寵物收藏
+//User
+$routes->post('/updateUserData', 'UserController::updateUserData', ["filter" => "auth"]);
+$routes->get('/userInfo', 'UserController::getUserInfo', ["filter" => "auth"]); //取得使用者資料 checked
+$routes->post('/rePassword', 'UserController::updateUserPassword', ["filter" => "auth"]); //update password
+
+//Pet
+$routes->get('/allPet', 'PetController::loadAllData', ["filter" => "auth"]);
+$routes->get('/selectPet', 'PetController::selectPetData', ["filter" => "auth"]);
 //City
 $routes->get('/getCity', 'CityController::getCity');
-=======
-$routes->post('/updatePhoto', 'UserController::updateUserPhoto', ["filter" => "auth"]); //修改個人圖片測試api
-$routes->get('/userInfo', 'UserController::getUserInfo', ["filter" => "auth"]); //取得使用者資料 checked
-$routes->post('/updateUserData', 'UserController::updateUserData', ["filter" => "auth"]);//更新使用者資料  checked
+$routes->post('/updatePhoto', 'UserController::updateUserPhoto', ["filter" => "auth"]);
+$routes->get('/userInfo', 'UserController::getUserInfo', ["filter" => "auth"]);
+$routes->post('/updateUserData', 'UserController::updateUserData', ["filter" => "auth"]);
 // Published
 $routes->post('/createPublish', 'PublishedController::createPublish', ["filter" => "auth"]);
 $routes->post('/editPublish', 'PublishedController::editPublish', ["filter" => "auth"]);
 $routes->post('/deletePublish', 'PublishedController::deletePublish', ["filter" => "auth"]);
 $routes->get('/selectPublish', 'PublishedController::selectPublish', ["filter" => "auth"]);
 //Collet
-$routes->post('/insertCollet', 'ColletController::insertPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
-$routes->get('/selectCollet', 'ColletController::selectPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
-$routes->post('/deleteCollet', 'ColletController::deletePetCollet', ["filter" => "auth"]);//刪除寵物收藏
->>>>>>> f85ea23d98e907787325469939783e91020bc828
+$routes->post('/insertCollet', 'ColletController::insertPetCollet', ["filter" => "auth"]); //搜尋寵物收藏
+$routes->get('/selectCollet', 'ColletController::selectPetCollet', ["filter" => "auth"]); //搜尋寵物收藏
+$routes->post('/deleteCollet', 'ColletController::deletePetCollet', ["filter" => "auth"]); //刪除寵物收藏
 //PublishCollect
-$routes->post('/insertCollet', 'PublishCollectController::insertPublishCollet', ["filter" => "auth"]);//新增刊登蒐藏
-$routes->get('/selectCollet', 'PublishCollectController::selectPublishCollet', ["filter" => "auth"]);//搜尋刊登蒐藏
-$routes->post('/deleteCollet', 'PublishCollectController::deletePublishCollet', ["filter" => "auth"]);//刪除寵物收藏
+$routes->post('/insertCollet', 'PublishCollectController::insertPublishCollet', ["filter" => "auth"]); //新增刊登蒐藏
+$routes->get('/selectCollet', 'PublishCollectController::selectPublishCollet', ["filter" => "auth"]); //搜尋刊登蒐藏
+$routes->post('/deleteCollet', 'PublishCollectController::deletePublishCollet', ["filter" => "auth"]); //刪除寵物收藏
 
 /*
  * --------------------------------------------------------------------
