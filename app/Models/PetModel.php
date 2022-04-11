@@ -29,6 +29,8 @@ class PetModel extends Model
         'pet_photo',
         'pet_address',
         'pet_phone',
+        'pet_lat',
+        'pet_lng',
         'city_id',
     ];
     /**
@@ -37,12 +39,11 @@ class PetModel extends Model
      */
     public function selectPetDataById($id)
     {
-        $r = $this->where('pet_id',$id)->first();
+        $r = $this->where('pet_id', $id)->first();
         return $r;
     }
     public function selectPetData()
     {
         # code...
     }
-
 }
