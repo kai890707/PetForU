@@ -74,10 +74,10 @@ $routes->post('/updatePhoto', 'UserController::updateUserPhoto', ["filter" => "a
 $routes->get('/userInfo', 'UserController::getUserInfo', ["filter" => "auth"]); //取得使用者資料 checked
 $routes->post('/updateUserData', 'UserController::updateUserData', ["filter" => "auth"]);//更新使用者資料  checked
 // Published
-$routes->post('/createPublish', 'PublishedController::createPublish', ["filter" => "auth"]); 
-$routes->post('/editPublish', 'PublishedController::editPublish', ["filter" => "auth"]); 
-$routes->post('/deletePublish', 'PublishedController::deletePublish', ["filter" => "auth"]); 
-$routes->get('/selectPublish', 'PublishedController::selectPublish', ["filter" => "auth"]); 
+$routes->post('/createPublish', 'PublishedController::createPublish', ["filter" => "auth"]);
+$routes->post('/editPublish', 'PublishedController::editPublish', ["filter" => "auth"]);
+$routes->post('/deletePublish', 'PublishedController::deletePublish', ["filter" => "auth"]);
+$routes->get('/selectPublish', 'PublishedController::selectPublish', ["filter" => "auth"]);
 //Collet
 $routes->post('/insertCollet', 'ColletController::insertPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
 $routes->get('/selectCollet', 'ColletController::selectPetCollet', ["filter" => "auth"]);//搜尋寵物收藏
