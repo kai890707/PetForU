@@ -8,21 +8,33 @@ class PetController extends BaseController
 {
   protected $session;
   protected $model;
+  protected $db;
   public function __construct()
   {
     $this->session = \Config\Services::session();
     $this->session->start();
     $this->model = new PetModel();
+    $this->db = db_connect();
   }
 
   public function loadAllData()
   {
     return $this->response->setJson($this->model->findAll());
   }
-  public function selectPetDataById($id)
+
+  public function selectPetDataById()
   {
-    # code...
+    $pet_id = $this->request->getPostGet('pet_id');
+    $builder = $this->db->table('pet');
+    $builder->select('pet.* , city.city_name');
+    $builder->join('city', 'city.city_id = pet.city_id');
+    $builder->where('pet.pet_id', $pet_id);
+    $query = $builder->get()->getResult();
+
+    return $this->response->setJSON($query);
+
   }
+
   public function selectPetData()
   {
     $data = $this->request->getVar();

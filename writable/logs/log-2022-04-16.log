@@ -1,3 +1,9 @@
 ERROR - 2022-04-16 00:57:23 --> Column 'city_id' cannot be null
 ERROR - 2022-04-16 00:57:57 --> Column 'city_id' cannot be null
 ERROR - 2022-04-16 00:59:15 --> Column 'city_id' cannot be null
+CRITICAL - 2022-04-16 05:10:34 --> Too few arguments to function App\Controllers\PetController::selectPetDataById(), 0 passed in C:\xampp\htdocs\petforyou\system\CodeIgniter.php on line 832 and exactly 1 expected
+#0 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(832): App\Controllers\PetController->selectPetDataById()
+#1 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PetController))
+#2 C:\xampp\htdocs\petforyou\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#3 C:\xampp\htdocs\petforyou\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#4 {main}

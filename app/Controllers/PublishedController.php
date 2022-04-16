@@ -8,11 +8,13 @@ class PublishedController extends BaseController
 {
     protected $model;
     protected $session;
+    protected $db;
     public function __construct()
     {
         $this->model = new PublishedModel();
         $this->session = \Config\Services::session();
         $this->session->start();
+        $this->db = db_connect();
     }
 
     public function createPublish()
@@ -246,4 +248,106 @@ class PublishedController extends BaseController
         $result = $this->model->where('user_id', $user_id)->findAll();
         return $this->response->setJSON($result);
     }
+
+    public function loadAllPublishData()
+    {
+        $user_id = $this->session->get('user_id');
+        if ($user_id == null || $user_id == "") {
+            $response = [
+                'status' => 'fail',
+                'message' => '您尚未登入，請登入後再進行操作!'
+            ];
+            return $this->response->setJSON($response);
+        }
+
+        $builder = $this->db->table('published');
+        $builder->select('user.user_name,user.user_gender, user.user_phone,user.user_email,user. user_photo,published.* , city.city_name');
+        $builder->join('user', 'user.user_id = published.user_id');
+        $builder->join('city', 'city.city_id = published.city_id');
+        $query = $builder->get()->getResult();
+        return $this->response->setJSON($query);
+    }
+
+
+    public function getIdSelectPublish()
+    {
+        $user_id = $this->session->get('user_id');
+        if ($user_id == null || $user_id == "") {
+            $response = [
+                'status' => 'fail',
+                'message' => '您尚未登入，請登入後再進行操作!'
+            ];
+            return $this->response->setJSON($response);
+        }
+
+        $published_id = $this->request->getPostGet('published_id');
+        $builder = $this->db->table('published');
+        $builder->select('user.user_name,user.user_gender, user.user_phone,user.user_email,user. user_photo,published.* , city.city_name');
+        $builder->join('user', 'user.user_id = published.user_id');
+        $builder->join('city', 'city.city_id = published.city_id');
+        $builder->where('published.published_id',  $published_id);
+        $query = $builder->get()->getResult();
+        return $this->response->setJSON($query);
+        
+    }
+
+    public function conditionSelect()
+    {
+        $user_id = $this->session->get('user_id');
+        if ($user_id == null || $user_id == "") {
+            $response = [
+                'status' => 'fail',
+                'message' => '您尚未登入，請登入後再進行操作!'
+            ];
+            return $this->response->setJSON($response);
+        }
+
+        $data = $this->request->getVar();
+        $dataArray = array();
+        $nameFind = array(
+            'dog' => '狗',
+            'cat' => '貓',
+            'all' => 'all',
+            'small' => '小型',
+            'medium' => '中型',
+            'large' => '大型',
+            'male' => '男',
+            'female' => '女',
+            'child' => '幼年',
+            'adult' => '成年',
+            'yes' => '是',
+            'no' => '否',
+      
+          );
+          array_push(
+            $dataArray,
+            $data['city_id'],
+            $data['pet_kind'],
+            $data['pet_bodytype'],
+            $data['pet_gender'],
+            $data['pet_age'],
+            $data['pet_sterilization'],
+            $data['pet_bacterin'],
+          );
+
+          for ($i = 0; $i < count($dataArray); $i++) {
+            if (isset($nameFind[$dataArray[$i]])) {
+              $dataArray[$i] = $nameFind[$dataArray[$i]];
+            }
+          }
+       
+          $responseData = $this->model
+          ->where($dataArray[0] == 'all' ? 'city_id !=' : 'city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0])
+          ->where($dataArray[1] == 'all' ? 'published_kind !=' : 'published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1])
+          ->where($dataArray[2] == 'all' ? 'published_bodytype !=' : 'published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2])
+          ->where($dataArray[3] == 'all' ? 'published_gender !=' : 'published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3])
+          ->where($dataArray[4] == 'all' ? 'published_age !=' : 'published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4])
+          ->where($dataArray[5] == 'all' ? 'published_sterilization !=' : 'published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5])
+          ->where($dataArray[6] == 'all' ? 'published_bacterin !=' : 'published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6])
+          ->findAll();
+
+          return $this->response->setJSON($responseData);
+
+    }
+  
 }
