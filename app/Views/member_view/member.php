@@ -70,7 +70,7 @@
                             <hr>
                         </div>
                         <div class="col-lg-3 col-md-3 col-12 d-flex justify-content-center">
-                            <img class="img-fluid img-thumbnail" src="${e.pet_photo}" alt="" width="150px" height="100px">
+                            <img class="img-fluid img-thumbnail" src="${e.pet_photo=="無"?BaseLib.base_Url+'/public/assets/img/custom/main.png':e.pet_photo}" alt="" width="150px" height="100px">
                         </div>
                         <div class="col-lg-6 col-md-6 col-12 text-sm-center mt-sm-2">
                             <div class="row">
@@ -229,6 +229,28 @@
                     console.log(err);
                 })
             },
+            editPublish:(formID)=>{
+                console.log('before',formID);
+               
+                    var formData = new FormData(document.getElementById(formID));
+                    
+                
+                    BaseLib.Post("/public/editPublish",formData).then(
+                    (res)=>{
+                        BaseLib.ResponseCheck(res).then(()=>{
+                            if(res.status =="success"){
+                                window.location.reload();
+                            }
+                        
+                        })
+                        
+                    },
+                    (err)=>{
+                        console.log(err);
+                    })
+            
+                
+            },
             deletePublish:(id)=>{
                 Swal.fire({
                     title: '確定要刪除嗎?',
@@ -308,8 +330,9 @@
                                 </button>
                                 
                             </div>
-                            <form id="post-edit-form">
+                            <form id="post-edit-form${e.published_id}">
                                 <div class="modal-body">
+                                    <input type="text" class="form-control" id="published_id"name="published_id" value="${e.published_id}" hidden>
                                     <p><span class="text-danger">*</span>為必填欄位</p>
                                     <div class="form-group row">
                                         <label for="publish_name" class="col-sm-5 col-form-label"><span class="text-danger">*</span>寵物名字</label>
@@ -356,18 +379,51 @@
                                     <div class="form-group row">
                                         <label for="publish_sterilization" class="col-sm-5 col-form-label"><span class="text-danger">*</span>是否絕育</label>
                                         <div class="col-sm-7">
-                                            <select class="form-control" name="publish_sterilization" value="${e.published_sterilization=="是"?'yes':'no'}">
-                                            <option value="yes" selected="${e.published_sterilization=="是"?'selected':''}">是</option>
-                                                <option value="no" selected=" ${e.published_sterilization=="否"?'selected':''}">否</option>
+                                            <select class="form-control" name="publish_sterilization" value="${e.published_sterilization=="yes"?'yes':'no'}">
+                                            <option value="yes" ${e.published_sterilization=="yes"?'selected':''}>是</option>
+                                                <option value="no" ${e.published_sterilization=="no"?'selected':''}>否</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="publish_sterilization" class="col-sm-5 col-form-label"><span class="text-danger">*</span>是否施打狂犬病疫苗</label>
                                         <div class="col-sm-7">
-                                            <select class="form-control form-control" name="publish_bacterin" value="${e.published_bacterin=="是"?'yes':'no'}">
-                                                <option value="yes" selected="${e.published_bacterin=="是"?'selected':''}">是</option>
-                                                <option value="no" selected=" ${e.published_bacterin=="否"?'selected':''}">否</option>
+                                            <select class="form-control form-control" name="publish_bacterin" value="${e.published_bacterin=="yes"?'yes':'no'}">
+                                                <option value="yes"${e.published_bacterin=="yes"?'selected':''}>是</option>
+                                                <option value="no" ${e.published_bacterin=="no"?'selected':''}>否</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="city_id" class="col-sm-5 col-form-label"><span class="text-danger">*</span>所在地</label>
+                                        <div class="col-sm-7">
+                                            <select class="form-control form-control"  id="city_id" name="city_id" value="${e.city_id}">
+                                                <option value="1"${e.city_id=="1"?'selected':''}>基隆市</option>
+                                                <option value="2"${e.city_id=="2"?'selected':''}>臺北市</option>
+                                                <option value="3" ${e.city_id=="3"?'selected':''}>新北市</option>
+                                                <option value="4" ${e.city_id=="4"?'selected':''}>桃園縣</option>
+                                                <option value="5" ${e.city_id=="5"?'selected':''}>桃園市</option>
+                                                <option value="6" ${e.city_id=="6"?'selected':''}>新竹市</option>
+                                                <option value="7" ${e.city_id=="7"?'selected':''}>新竹縣</option>
+                                                <option value="8" ${e.city_id=="8"?'selected':''}>苗栗縣</option>
+                                                <option value="9" ${e.city_id=="9"?'selected':''}>臺中市</option>
+                                                <option value="10"${e.city_id=="10"?'selected':''}>彰化縣</option>
+                                                <option value="11"${e.city_id=="11"?'selected':''}>彰化市</option>
+                                                <option value="12"${e.city_id=="12"?'selected':''}>南投縣</option>
+                                                <option value="13"${e.city_id=="13"?'selected':''}>雲林縣</option>
+                                                <option value="14"${e.city_id=="14"?'selected':''}>嘉義市</option>
+                                                <option value="15"${e.city_id=="15"?'selected':''}>嘉義縣</option>
+                                                <option value="16"${e.city_id=="16"?'selected':''}>臺南市</option>
+                                                <option value="17"${e.city_id=="17"?'selected':''}>高雄市</option>
+                                                <option value="18"${e.city_id=="18"?'selected':''}>屏東縣</option>
+                                                <option value="19"${e.city_id=="19"?'selected':''}>屏東市</option>
+                                                <option value="20"${e.city_id=="20"?'selected':''}>臺東縣</option>
+                                                <option value="21"${e.city_id=="21"?'selected':''}>花蓮縣</option>
+                                                <option value="22"${e.city_id=="22"?'selected':''}>宜蘭縣</option>
+                                                <option value="23"${e.city_id=="23"?'selected':''}>澎湖縣</option>
+                                                <option value="24"${e.city_id=="24"?'selected':''}>金門縣</option>
+                                                <option value="25"${e.city_id=="25"?'selected':''}>連江縣</option>
+                                            </select>
                                             </select>
                                         </div>
                                     </div>
@@ -379,24 +435,17 @@
                                     </div>
                                     <div class="form-group row">
                                         <label for="publish_remark" class="col-sm-12 col-form-label"><span class="text-danger">*</span>寵物圖片</label>
-                                    
-                                 
-                                            <input type="file" name="publish_photo" class="pet_file" accept="image/*">
-                                            <div class="input-group col-sm-12">
-                                                <input type="text" class="form-control" disabled placeholder="Upload File" id="petimgfile">
-                                                <div class="input-group-append">
-                                                    <button type="button" class="pet_browse btn btn-primary">上傳</button>
-                                                </div>
-                                            </div>
-                                       
-                                        <div class=" col-sm-12">
-                                            <img src="${BaseLib.base_Url+"/public/"+e.published_photo}" id="pet_preview" class="img-thumbnail">
+                                        <div class="input-group col-sm-12">
+                                        <input type="file" accept="image/*" name="publish_photo" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
                                         </div>
+                                        <div class=" col-sm-12">
+                                            <img id="pic" src="${BaseLib.base_Url}/public/${e.published_photo}" class="img-thumbnail">
+                                        </div>    
                                     </div>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
-                                    <button id="edit-submit" type="submit" class="btn btn-primary">修改</button>
+                                    <button id="edit-submit" type="button" class="btn btn-primary" onclick="PetFun.editPublish('post-edit-form${e.published_id}')">修改</button>
                                 </div>
                             </form>
                             </div>
@@ -429,22 +478,7 @@
             // read the image file as a data URL.
             reader.readAsDataURL(this.files[0]);
         });
-        $(document).on("click", ".pet_browse", function() {
-            var file = $(this).parents().find(".pet_file");
-            file.trigger("click");
-            });
-            $('input[type="file"]').change(function(e) {
-            var fileName = e.target.files[0].name;
-            $("#petimgfile").val(fileName);
 
-            var reader = new FileReader();
-            reader.onload = function(e) {
-                // get loaded data and render thumbnail.
-                document.getElementById("pet_preview").src = e.target.result;
-            };
-            // read the image file as a data URL.
-            reader.readAsDataURL(this.files[0]);
-        });
        
         $('#name_change').click(()=>{
             $('#name_input').removeClass('d-none');
@@ -510,6 +544,7 @@
             var formData = new FormData(document.getElementById('post-pet-form'));
             PetFun.createPublish(formData);
         })
+       
         
     </script>
 <?= $this->endSection() ?>

@@ -73,6 +73,40 @@
                     </div>
                 </div>
                 <div class="form-group row">
+                    <label for="city_id" class="col-sm-5 col-form-label"><span class="text-danger">*</span>所在地</label>
+                    <div class="col-sm-7">
+                        <select class="form-control form-control"  id="city_id" name="city_id">
+                            <option value="1">基隆市</option>
+                            <option value="2">臺北市</option>
+                            <option value="3">新北市</option>
+                            <option value="4">桃園縣</option>
+                            <option value="5">桃園市</option>
+                            <option value="6">新竹市</option>
+                            <option value="7">新竹縣</option>
+                            <option value="8">苗栗縣</option>
+                            <option value="9">臺中市</option>
+                            <option value="10">彰化縣</option>
+                            <option value="11">彰化市</option>
+                            <option value="12">南投縣</option>
+                            <option value="13">雲林縣</option>
+                            <option value="14">嘉義市</option>
+                            <option value="15">嘉義縣</option>
+                            <option value="16">臺南市</option>
+                            <option value="17">高雄市</option>
+                            <option value="18">屏東縣</option>
+                            <option value="19">屏東市</option>
+                            <option value="20">臺東縣</option>
+                            <option value="21">花蓮縣</option>
+                            <option value="22">宜蘭縣</option>
+                            <option value="23">澎湖縣</option>
+                            <option value="24">金門縣</option>
+                            <option value="25">連江縣</option>
+                        </select>
+                        </select>
+                    </div>
+                </div>
+         
+                <div class="form-group row">
                 <label for="publish_remark" class="col-sm-12 col-form-label"><span class="text-danger">*</span>寵物備註</label>
                     <div class="col-sm-12">
                         <textarea class="form-control" id="publish_remark" rows="3" name="publish_remark"></textarea>
@@ -80,19 +114,12 @@
                 </div>
                 <div class="form-group row">
                     <label for="publish_remark" class="col-sm-12 col-form-label"><span class="text-danger">*</span>寵物圖片</label>
-                   
-                    <!-- <form method="post" id="image-form"> -->
-                        <input type="file" name="publish_photo" class="pet_file" accept="image/*">
-                        <div class="input-group col-sm-12">
-                            <input type="text" class="form-control" disabled placeholder="Upload File" id="petimgfile">
-                            <div class="input-group-append">
-                                <button type="button" class="pet_browse btn btn-primary">上傳</button>
-                            </div>
-                        </div>
-                    <!-- </form> -->
-                    <div class=" col-sm-12">
-                        <img src="" id="pet_preview" class="img-thumbnail">
+                    <div class="input-group col-sm-12">
+                    <input type="file" accept="image/*" name="publish_photo" oninput="pic.src=window.URL.createObjectURL(this.files[0])">
                     </div>
+                    <div class=" col-sm-12">
+                        <img id="pic" src="<?php echo base_Url().'/public/assets/img/custom/main.png'?>" class="img-thumbnail">
+                    </div>    
                 </div>
             </div>
             <div class="modal-footer">

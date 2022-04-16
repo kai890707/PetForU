@@ -28,13 +28,15 @@ class PublishedController extends BaseController
         $publish_sterilization = $this->request->getPostGet('publish_sterilization');
         $publish_bacterin = $this->request->getPostGet('publish_bacterin');
         $publish_remark = $this->request->getPostGet('publish_remark');
+        $city_id = $this->request->getPostGet('city_id');
         $publish_photo = $this->request->getFile('publish_photo');
         $re_publish_photo = $publish_photo->getName();
         $user_id = $this->session->get('user_id');
-        $city_id = $this->session->get('city_id');
+        
         $getDate = date("Y-m-d");
         /** 獲取表單資料 end*/
-        $re_publish_photo = $publish_photo->getName();
+        
+       
         $dataArray = array();
         array_push(
             $dataArray,
@@ -53,6 +55,7 @@ class PublishedController extends BaseController
             if ($dataArray[$i] == '') {
                 $dataArray[$i] = '無';
             }
+            
         }
 
         $temp = explode(".", $re_publish_photo);
@@ -72,6 +75,7 @@ class PublishedController extends BaseController
                 'published_status' => "無",
                 'published_remark' => $dataArray[9],
                 'published_createDate' => $getDate,
+                'published_photo' => 'assets/img/custom/main.png',
                 'user_id' => $user_id,
                 'city_id' => $city_id,
             ];
@@ -171,6 +175,8 @@ class PublishedController extends BaseController
                 'published_bacterin' => $dataArray[8],
                 'published_status' => "無",
                 'published_remark' => $dataArray[9],
+                'city_id' => $city_id,
+                
             ];
         } else {
             $temp = explode(".", $re_publish_photo);

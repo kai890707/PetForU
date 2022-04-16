@@ -1,0 +1,3 @@
+ERROR - 2022-04-16 00:57:23 --> Column 'city_id' cannot be null
+ERROR - 2022-04-16 00:57:57 --> Column 'city_id' cannot be null
+ERROR - 2022-04-16 00:59:15 --> Column 'city_id' cannot be null

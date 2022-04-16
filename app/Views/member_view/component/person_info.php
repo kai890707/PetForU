@@ -44,7 +44,6 @@
                 <div class="row">
                     <div class=" col-sm-6">
                         <div id="msg"></div>
-                    
                             <input type="file" name="img" class="file" accept="image/*">
                             <div class="input-group my-3">
                                 <input type="text" class="form-control" disabled placeholder="Upload File" id="file" name="file">

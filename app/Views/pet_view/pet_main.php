@@ -20,7 +20,7 @@
                 <div class="col-lg-12 posts-list">
                     <div class="single-post row">
                         <div class="feature-img col-lg-6 col-md-6 col-12 justify-content-center align-items-center d-flex">
-                            <img class="img-fluid img-thumbnail" src="<?php echo $pet_info['pet_photo'] ?>" alt="" width="400px" height="300px">
+                            <img class="img-fluid img-thumbnail" src="<?php echo $pet_info['pet_photo']=="無"?base_Url()."/public/assets/img/custom/main.png": $pet_info['pet_photo'] ?>" alt="" width="400px" height="300px">
                         </div>
                         <div class="blog_details col-lg-6 col-md-6 col-12 p-4">
                             
