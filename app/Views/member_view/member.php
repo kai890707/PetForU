@@ -285,7 +285,7 @@
                             <div class="row">
                                 <div class="col-8 d-flex align-items-center">
                                     <h4 class="font-weight-bold text-dark text-start m-0">
-                                        <i class="fa fa-paw mr-2"></i>浪浪資訊
+                                        <i class="fa fa-paw mr-2"></i>寵物資訊
                                     </h4>
                                 </div>
                             </div>

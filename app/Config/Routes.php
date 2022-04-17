@@ -37,6 +37,7 @@ $routes->get('/login', 'View::login_view');
 $routes->get('/register', 'View::register_view');
 $routes->get('/find', 'View::find_view');
 $routes->get('/pet/(:num)', 'View::pet_view/$1');
+$routes->get('/publishSingle/(:num)', 'View::publishSingle_view/$1');
 $routes->get('/person', 'View::person_view', ["filter" => "auth"]);
 $routes->get('/publish', 'View::publish_view');
 $routes->get('/mail', 'View::sendMail');
@@ -68,7 +69,7 @@ $routes->post('/editPublish', 'PublishedController::editPublish', ["filter" => "
 $routes->post('/deletePublish', 'PublishedController::deletePublish', ["filter" => "auth"]);
 $routes->get('/selectPublish', 'PublishedController::selectPublish', ["filter" => "auth"]);
 $routes->get('/loadAllPublish', 'PublishedController::loadAllPublishData', ["filter" => "auth"]); //搜尋所有刊登
-$routes->post('/conditionSelect', 'PublishedController::conditionSelect', ["filter" => "auth"]); //條件搜尋刊登
+$routes->get('/conditionSelect', 'PublishedController::conditionSelect'); //條件搜尋刊登
 $routes->post('/getIdSelectPublish', 'PublishedController::getIdSelectPublish', ["filter" => "auth"]); //key搜尋刊登
 //Collet
 $routes->post('/insertCollet', 'ColletController::insertPetCollet', ["filter" => "auth"]); //搜尋寵物收藏

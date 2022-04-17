@@ -7,12 +7,14 @@ class View extends BaseController
     protected $pet_model;
     protected $publish_model;
     protected $collet_model;
+    protected $publish_collet_model;
     protected $db;
     public function __construct()
     {
         $this->pet_model =new \App\Models\PetModel();
         $this->collet_model =new \App\Models\ColletModel();
         $this->publish_model =new \App\Models\PublishedModel();
+        $this->publish_collet_model =new \App\Models\PublishedCollectModel();
         $this->db = db_connect();
     }
     public function index()
@@ -59,6 +61,24 @@ class View extends BaseController
             ];
             
             echo view('pet_view/pet', $data);
+        }else{
+            echo view('404');
+        }
+        
+    }
+    public function publishSingle_view($id = null)
+    {
+        $user_id = session()->get('user_id');
+        $petinfo = $this->publish_model->selectPublishDataById($id);
+        $isCollect = $this->publish_collet_model->isCollect($user_id,$id);
+        if($petinfo){
+            $data = [
+                'page_title' => '寵物資訊',
+                'pet_info'=>$petinfo,
+                'isCollect'=>$isCollect
+            ];
+            
+            echo view('publishSingle_view/publishSingle',$data);
         }else{
             echo view('404');
         }

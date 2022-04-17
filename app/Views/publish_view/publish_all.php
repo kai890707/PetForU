@@ -1,6 +1,6 @@
 <div class="row justify-content-center mt-5">
     <?php foreach($pets as $p){?>
-        <div class="col-lg-4 col-md-6" id="petcard-<?php echo $p['pet_id']?>" onclick="FindPetFun.redirect(<?php echo $p['pet_id']?>);">
+        <div class="col-lg-4 col-md-6" id="petcard-<?php echo $p['published_id']?>"  onclick="FindPublishFun.redirect(<?php echo $p['published_id'] ?>);">
             <div class="single_service pet_card ">
                     <div class="service_thumb  d-flex align-items-center justify-content-center pet_card_size">
                         <div class="service_icon " >

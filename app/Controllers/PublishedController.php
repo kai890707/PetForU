@@ -247,7 +247,7 @@ class PublishedController extends BaseController
         $builder = $this->db->table('published');
         $builder->select('published.* , city.city_name');
         $builder->join('city', 'city.city_id = published.city_id');
-        $builder->where('published.published_id',  $user_id);
+        $builder->where('published.user_id',  $user_id);
         $query = $builder->get()->getResult();
         return $this->response->setJSON($query);
     }
@@ -274,18 +274,9 @@ class PublishedController extends BaseController
 
     public function getIdSelectPublish()
     {
-        $user_id = $this->session->get('user_id');
-        if ($user_id == null || $user_id == "") {
-            $response = [
-                'status' => 'fail',
-                'message' => '您尚未登入，請登入後再進行操作!'
-            ];
-            return $this->response->setJSON($response);
-        }
-
         $published_id = $this->request->getPostGet('published_id');
         $builder = $this->db->table('published');
-        $builder->select('user.user_name,user.user_gender, user.user_phone,user.user_email,user. user_photo,published.* , city.city_name');
+        $builder->select('published.*,user.user_name,user.user_gender, user.user_phone,user.user_email,user. user_photo,published.* , city.city_name');
         $builder->join('user', 'user.user_id = published.user_id');
         $builder->join('city', 'city.city_id = published.city_id');
         $builder->where('published.published_id',  $published_id);
@@ -295,15 +286,7 @@ class PublishedController extends BaseController
 
     public function conditionSelect()
     {
-        $user_id = $this->session->get('user_id');
-        if ($user_id == null || $user_id == "") {
-            $response = [
-                'status' => 'fail',
-                'message' => '您尚未登入，請登入後再進行操作!'
-            ];
-            return $this->response->setJSON($response);
-        }
-
+        
         $data = $this->request->getVar();
         $dataArray = array();
         $nameFind = array(
@@ -337,19 +320,21 @@ class PublishedController extends BaseController
                 $dataArray[$i] = $nameFind[$dataArray[$i]];
             }
         }
-
-
-        $builder = $this->db->table('published');
-        $builder->select('published.* , city.city_name');
-        $builder->join('city', 'city.city_id = published.city_id');
-        $builder->where($dataArray[0] == 'all' ? 'published.city_id !=' : 'published.city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0]);
-        $builder->where($dataArray[1] == 'all' ? 'published.published_kind !=' : 'published.published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1]);
-        $builder->where($dataArray[2] == 'all' ? 'published.published_bodytype !=' : 'published.published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2]);
-        $builder->where($dataArray[3] == 'all' ? 'published.published_gender !=' : 'published.published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3]);
-        $builder->where($dataArray[4] == 'all' ? 'published.published_age !=' : 'published.published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4]);
-        $builder->where($dataArray[5] == 'all' ? 'published.published_sterilization !=' : 'published.published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5]);
-        $builder->where($dataArray[6] == 'all' ? 'published.published_bacterin !=' : 'published.published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6]);
-        $query = $builder->get()->getResult();
-        return $this->response->setJSON($query);
+        $data = [
+            'page_title' => '找浪浪',
+            'pets' => $this->model
+                ->select('published.* , city.city_name')
+                ->join('city', 'city.city_id = published.city_id')
+                ->where($dataArray[0] == 'all' ? 'published.city_id !=' : 'published.city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0])
+                ->where($dataArray[1] == 'all' ? 'published.published_kind !=' : 'published.published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1])
+                ->where($dataArray[2] == 'all' ? 'published.published_bodytype !=' : 'published.published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2])
+                ->where($dataArray[3] == 'all' ? 'published.published_gender !=' : 'published.published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3])
+                ->where($dataArray[4] == 'all' ? 'published.published_age !=' : 'published.published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4])
+                ->where($dataArray[5] == 'all' ? 'published.published_sterilization !=' : 'published.published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5])
+                ->where($dataArray[6] == 'all' ? 'published.published_bacterin !=' : 'published.published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6])
+              ->paginate(12),
+            'pager' => $this->model->pager
+          ];
+          echo view('publish_view/publish', $data);
     }
 }

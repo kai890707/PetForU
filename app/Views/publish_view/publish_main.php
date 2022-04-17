@@ -17,7 +17,7 @@
     <!-- service_area_start  -->
     <div class="service_area">
         <div class="container">
-        <form id="selectPet-form">
+        <form id="selectPet-form" action="<?php echo base_url().'/public/conditionSelect'?>">
                 <div class="form-row">
                     <div class="form-group col">
                         <label for="type">類型</label>
@@ -100,11 +100,14 @@
                         </select>
                     </div>
                     <div class="form-group col d-flex align-items-end">
-                        <a href="#" class="genric-btn info ">搜尋</a>
+                    <button  type="submit" class="genric-btn info ">搜尋</button>
                     </div>
                 </div>
             </form>
             <?= $this->include('publish_view/publish_all') ?>
+            <div class="d-flex justify-content-center align-items-center">
+            <?= $pager->links() ?>  
+            </div>
             <!-- <div class="row justify-content-center ">
                 
                 <div class="col-lg-7 col-md-10">

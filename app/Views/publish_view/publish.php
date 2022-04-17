@@ -2,22 +2,23 @@
 
 <?= $this->section('css') ?>
     <?= $this->include('base_view/css') ?>
-<style>
-    #btn-back-to-top {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        display: none;
-        background-color: #ffc5c2;
-    }
-    #btn-back-to-top:hover{
-        background-color: rgb(255, 197, 170);
-    }
-    #btn-back-to-top >i{
-        color: white;
-    }
+    <style>
+        #btn-back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            display: none;
+            background-color: #ffc5c2;
+        }
+        #btn-back-to-top:hover{
+            background-color: rgb(255, 197, 170);
+        }
+        #btn-back-to-top >i{
+            color: white;
+        }
 
-</style>
+    </style>
+    <link rel="stylesheet" href="<?php echo base_url('public')?>/assets/css/find_view.css">
 <?= $this->endSection() ?>
 <?= $this->section('main') ?>
     <?= $this->include('base_view/nav') ?>
@@ -58,5 +59,10 @@
             // document.documentElement.scrollTop = 0;
             $('html,body').animate({ scrollTop: 0 }, 'slow');
         }
+        var FindPublishFun={
+            redirect:(id)=>{
+                window.location=BaseLib.base_Url+`/public/publishSingle/${id}`;
+            }
+       }
     </script>
 <?= $this->endSection() ?>
