@@ -338,16 +338,18 @@ class PublishedController extends BaseController
             }
         }
 
-        $responseData = $this->model
-            ->where($dataArray[0] == 'all' ? 'city_id !=' : 'city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0])
-            ->where($dataArray[1] == 'all' ? 'published_kind !=' : 'published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1])
-            ->where($dataArray[2] == 'all' ? 'published_bodytype !=' : 'published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2])
-            ->where($dataArray[3] == 'all' ? 'published_gender !=' : 'published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3])
-            ->where($dataArray[4] == 'all' ? 'published_age !=' : 'published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4])
-            ->where($dataArray[5] == 'all' ? 'published_sterilization !=' : 'published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5])
-            ->where($dataArray[6] == 'all' ? 'published_bacterin !=' : 'published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6])
-            ->findAll();
 
-        return $this->response->setJSON($responseData);
+        $builder = $this->db->table('published');
+        $builder->select('published.* , city.city_name');
+        $builder->join('city', 'city.city_id = published.city_id');
+        $builder->where($dataArray[0] == 'all' ? 'published.city_id !=' : 'published.city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0]);
+        $builder->where($dataArray[1] == 'all' ? 'published.published_kind !=' : 'published.published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1]);
+        $builder->where($dataArray[2] == 'all' ? 'published.published_bodytype !=' : 'published.published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2]);
+        $builder->where($dataArray[3] == 'all' ? 'published.published_gender !=' : 'published.published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3]);
+        $builder->where($dataArray[4] == 'all' ? 'published.published_age !=' : 'published.published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4]);
+        $builder->where($dataArray[5] == 'all' ? 'published.published_sterilization !=' : 'published.published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5]);
+        $builder->where($dataArray[6] == 'all' ? 'published.published_bacterin !=' : 'published.published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6]);
+        $query = $builder->get()->getResult();
+        return $this->response->setJSON($query);
     }
 }
