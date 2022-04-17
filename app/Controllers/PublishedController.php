@@ -34,11 +34,11 @@ class PublishedController extends BaseController
         $publish_photo = $this->request->getFile('publish_photo');
         $re_publish_photo = $publish_photo->getName();
         $user_id = $this->session->get('user_id');
-        
+
         $getDate = date("Y-m-d");
         /** 獲取表單資料 end*/
-        
-       
+
+
         $dataArray = array();
         array_push(
             $dataArray,
@@ -57,7 +57,6 @@ class PublishedController extends BaseController
             if ($dataArray[$i] == '') {
                 $dataArray[$i] = '無';
             }
-            
         }
 
         $temp = explode(".", $re_publish_photo);
@@ -178,7 +177,7 @@ class PublishedController extends BaseController
                 'published_status' => "無",
                 'published_remark' => $dataArray[9],
                 'city_id' => $city_id,
-                
+
             ];
         } else {
             $temp = explode(".", $re_publish_photo);
@@ -245,8 +244,12 @@ class PublishedController extends BaseController
     public function selectPublish()
     {
         $user_id = $this->session->get('user_id');
-        $result = $this->model->where('user_id', $user_id)->findAll();
-        return $this->response->setJSON($result);
+        $builder = $this->db->table('published');
+        $builder->select('published.* , city.city_name');
+        $builder->join('city', 'city.city_id = published.city_id');
+        $builder->where('published.published_id',  $user_id);
+        $query = $builder->get()->getResult();
+        return $this->response->setJSON($query);
     }
 
     public function loadAllPublishData()
@@ -288,7 +291,6 @@ class PublishedController extends BaseController
         $builder->where('published.published_id',  $published_id);
         $query = $builder->get()->getResult();
         return $this->response->setJSON($query);
-        
     }
 
     public function conditionSelect()
@@ -317,9 +319,9 @@ class PublishedController extends BaseController
             'adult' => '成年',
             'yes' => '是',
             'no' => '否',
-      
-          );
-          array_push(
+
+        );
+        array_push(
             $dataArray,
             $data['city_id'],
             $data['pet_kind'],
@@ -328,26 +330,24 @@ class PublishedController extends BaseController
             $data['pet_age'],
             $data['pet_sterilization'],
             $data['pet_bacterin'],
-          );
+        );
 
-          for ($i = 0; $i < count($dataArray); $i++) {
+        for ($i = 0; $i < count($dataArray); $i++) {
             if (isset($nameFind[$dataArray[$i]])) {
-              $dataArray[$i] = $nameFind[$dataArray[$i]];
+                $dataArray[$i] = $nameFind[$dataArray[$i]];
             }
-          }
-       
-          $responseData = $this->model
-          ->where($dataArray[0] == 'all' ? 'city_id !=' : 'city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0])
-          ->where($dataArray[1] == 'all' ? 'published_kind !=' : 'published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1])
-          ->where($dataArray[2] == 'all' ? 'published_bodytype !=' : 'published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2])
-          ->where($dataArray[3] == 'all' ? 'published_gender !=' : 'published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3])
-          ->where($dataArray[4] == 'all' ? 'published_age !=' : 'published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4])
-          ->where($dataArray[5] == 'all' ? 'published_sterilization !=' : 'published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5])
-          ->where($dataArray[6] == 'all' ? 'published_bacterin !=' : 'published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6])
-          ->findAll();
+        }
 
-          return $this->response->setJSON($responseData);
+        $responseData = $this->model
+            ->where($dataArray[0] == 'all' ? 'city_id !=' : 'city_id', $dataArray[0] == 'all' ? NULL : $dataArray[0])
+            ->where($dataArray[1] == 'all' ? 'published_kind !=' : 'published_kind', $dataArray[1] == 'all' ? NULL : $dataArray[1])
+            ->where($dataArray[2] == 'all' ? 'published_bodytype !=' : 'published_bodytype', $dataArray[2] == 'all' ? NULL : $dataArray[2])
+            ->where($dataArray[3] == 'all' ? 'published_gender !=' : 'published_gender', $dataArray[3] == 'all' ? NULL : $dataArray[3])
+            ->where($dataArray[4] == 'all' ? 'published_age !=' : 'published_age', $dataArray[4] == 'all' ? NULL : $dataArray[4])
+            ->where($dataArray[5] == 'all' ? 'published_sterilization !=' : 'published_sterilization', $dataArray[5] == 'all' ? NULL : $dataArray[5])
+            ->where($dataArray[6] == 'all' ? 'published_bacterin !=' : 'published_bacterin', $dataArray[6] == 'all' ? NULL : $dataArray[6])
+            ->findAll();
 
+        return $this->response->setJSON($responseData);
     }
-  
 }
