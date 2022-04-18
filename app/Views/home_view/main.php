@@ -174,9 +174,9 @@
                                     <img src="assets/img/team/2.png" alt="">
                                 </div>
                                 <div class="test_content">
-                                    <h4>台南王先生</h4>
-                                    <span>Head of web design</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci.</p>
+                                    <h4>台南市</h4>
+                                    <span>王先生</span>
+                                    <p>感謝此平台提供良好且完整的流浪動物資訊，讓我們可以透過良好管道收養浪浪。<br>讚讚讚!</p>
                                 </div>
                             </div>
                         </div>
@@ -186,9 +186,9 @@
                                     <img src="assets/img/testmonial/1.png" alt="">
                                 </div>
                                 <div class="test_content">
-                                    <h4>新北劉小姐</h4>
-                                    <span>Head of web design</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci.</p>
+                                    <h4>新北市</h4>
+                                    <span>劉小姐</span>
+                                    <p>PetForU.Com收藏全台灣的浪浪資訊，不侷限於單一縣市，讓我們不用大費周章尋找收容所再到現場看浪浪。<br>如此優質的平台一定要推一下吧!</p>
                                 </div>
                             </div>
                         </div>
@@ -198,9 +198,9 @@
                                     <img src="assets/img/team/2.png" alt="">
                                 </div>
                                 <div class="test_content">
-                                    <h4>高雄陳先生</h4>
-                                    <span>Head of web design</span>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerci.</p>
+                                    <h4>高雄市</h4>
+                                    <span>陳先生</span>
+                                    <p>身為一個愛狗人士，該平台真的非常優質且方便，可以讓使用者掌握流浪動物詳細資訊，還提供寵物媒合功能，大大降低了寵物棄養問題! 這一定要給個讚</p>
                                 </div>
                             </div>
                         </div>
@@ -212,62 +212,7 @@
     </div>
     <!-- testmonial_area_end  -->
 
-    <!-- team_area_start  -->
-    <!-- <div class="team_area">
-        <div class="container">
-            <div class="row justify-content-center ">
-                <div class="col-lg-6 col-md-10">
-                    <div class="section_title text-center mb-95">
-                        <h3>Our Team</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_team">
-                        <div class="thumb">
-                            <img src="assets/img/team/1.png" alt="">
-                        </div>
-                        <div class="member_name text-center">
-                            <div class="mamber_inner">
-                                <h4>Rala Emaia</h4>
-                                <p>Senior Director</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_team">
-                        <div class="thumb">
-                            <img src="assets/img/team/2.png" alt="">
-                        </div>
-                        <div class="member_name text-center">
-                            <div class="mamber_inner">
-                                <h4>jhon Smith</h4>
-                                <p>Senior Director</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="single_team">
-                        <div class="thumb">
-                            <img src="assets/img/team/3.png" alt="">
-                        </div>
-                        <div class="member_name text-center">
-                            <div class="mamber_inner">
-                                <h4>Rala Emaia</h4>
-                                <p>Senior Director</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <!-- team_area_start  -->
-
+   
     <div class="contact_anipat anipat_bg_1">
         <div class="container">
             <div class="row justify-content-center">
@@ -278,7 +223,7 @@
                             <p>PETFORU有著全台灣流浪動物資訊與認養平台，提供使用者可第一時間掌握浪浪資訊以及認養心儀的動物們。</p>
                         </div>
                         <div class="contact_btn d-flex align-items-center justify-content-center">
-                            <a href="contact.html" class="boxed-btn4">聯絡我們</a>
+                            <a href="<?php echo base_url().'/public/find'?>" class="boxed-btn4">尋找浪浪</a>
                             
                         </div>
                     </div>

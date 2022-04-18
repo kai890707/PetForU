@@ -23,7 +23,7 @@ class PublishCollectController extends BaseController
         $publish_id = $this->request->getPostGet('publish_id');
         $data = [
             'user_id' => $user_id,
-            'publish_id' => $publish_id,
+            'published_id' => $publish_id,
         ];
         if ($user_id == null || $user_id == "") {
             $response = [
@@ -47,7 +47,7 @@ class PublishCollectController extends BaseController
         return $this->response->setJSON($response);
     }
 
-    public function selectPublishCollet()
+    public function selectPublishCollect()
     {
         $user_id = $this->session->get('user_id');
         $builder = $this->db->table('publishedcollect');
@@ -59,12 +59,13 @@ class PublishCollectController extends BaseController
         return $this->response->setJSON($query);
     }
 
-    public function deletePublishCollet()
+    public function deletePublishCollect()
     {
         $user_id = $this->session->get('user_id');
-        $p_collect_id = $this->request->getPostGet('p_collect_id');
-        $result = $this->model->where('user_id', $user_id)->where('p_collect_id', $p_collect_id)->delete();
-
+        $publish_id = $this->request->getPostGet('publish_id');
+        $result = $this->model->where('user_id', $user_id)->where('published_id', $publish_id)->delete();
+        // $result = $this->model->where('user_id', $user_id)->where('p_collect_id', $p_collect_id)->delete();
+    
         if ($result) {
             $response = [
                 'status' => 'success',
@@ -76,6 +77,7 @@ class PublishCollectController extends BaseController
                 'message' => "刪除失敗",
             ];
         }
+    
         return $this->response->setJson($response);
     }
 }

@@ -11,14 +11,14 @@ class PublishedCollectModel extends Model
     // protected $returnType = 'array';
     protected $allowedFields = [
         'user_id',
-        'pulished_id',
+        'published_id',
     ];
     /**
      * @param [*] 找尋user跟動物是否存在收藏關系
      */
     public function isCollect($user_id, $published_id)
     {
-        $r = $this->where('user_id', $user_id)->where('pulished_id', $published_id)->first();
+        $r = $this->where('user_id', $user_id)->where('published_id', $published_id)->first();
         return $r;
     }
 }

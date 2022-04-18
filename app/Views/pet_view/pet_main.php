@@ -137,8 +137,13 @@
                             
                             
                         </div>
-                        <div class=" mb-5 pb-4">
-                            <div id="map"></div>
+                        <div class="blog_details col-12 mb-5 pb-4">
+                            <h2 class="text-center">浪浪所在地圖</h2>
+                            <hr class="hr_line">
+                            <div class=" mt-4 p-4">
+                                <div id="map"></div>
+                            </div>
+                           
                         </div>
                     </div>
             </div>

@@ -9,9 +9,9 @@
                                 聯絡我們
                             </h3>
                             <ul class="address_line">
-                                <li>+555 0000 565</li>
-                                <li><a href="#">Demomail@gmail.Com</a></li>
-                                <li>700, Green Lane, New York, USA</li>
+                                <li>09123456789</li>
+                                <li><a href="#">test123@gmail.Com</a></li>
+                                <li>高雄市燕巢區橫山路59號,台灣</li>
                             </ul>
                         </div>
                     </div>
@@ -34,11 +34,10 @@
                                 快速連結
                             </h3>
                             <ul class="links">
-                                <li><a href="#">About Us</a></li>
-                                <li><a href="#">Privacy Policy</a></li>
-                                <li><a href="#">Terms of Service</a></li>
-                                <li><a href="#">Login info</a></li>
-                                <li><a href="#">Knowledge Base</a></li>
+                                <li><a href="<?php echo base_url().'/public/'?>">首頁</a></li>
+                                <li><a href="<?php echo base_url().'/public/find'?>">找浪浪</a></li>
+                                <li><a href="<?php echo base_url().'/public/publish'?>">寵物媒合</a></li>
+                                <li><a href="<?php echo base_url().'/public/login'?>">登入</a></li>
                             </ul>
                         </div>
                     </div>
@@ -54,7 +53,7 @@
                             </div>
                             <p class="address_text">高雄市燕巢區橫山路59號,台灣
                             </p>
-                            <div class="socail_links">
+                            <!-- <div class="socail_links">
                                 <ul>
                                     <li>
                                         <a href="#">
@@ -77,7 +76,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </div>
+                            </div> -->
 
                         </div>
                     </div>

@@ -15,25 +15,39 @@
     <?= $this->include('base_view/js') ?>
 <?= $this->endSection() ?>
 <?= $this->section('custom_js') ?>
-    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL4tW2ZUt47XcDbcJdhMqc_56hLgkCA2I&callback=initMap"></script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDL4tW2ZUt47XcDbcJdhMqc_56hLgkCA2I&callback=initMap"></script>
     <script>
-        $('document').ready(()=>{
-            BaseLib.GetGoogle('https://maps.googleapis.com/maps/api/geocode/json?address=%E5%8F%B0%E7%81%A3%E5%8F%B0%E5%8C%97%E5%B8%82%E8%90%AC%E8%8F%AF%E5%8D%80%E5%BA%B7%E5%AE%9A%E8%B7%AF190%E8%99%9F&key=AIzaSyCIYa2mDtnA-YhijYbEp6mpicog7uWjQ1U')
-            .then((res)=>{
-                console.log(res.geometry);
-            },(err)=>{
-
-            })
-        })
-        let map;
+         var isLogin = "<?php echo  session()->has('user_account')?>";
         function initMap() {
-        map = new google.maps.Map(document.getElementById("map"), {
-            center: { lat: -34.397, lng: 150.644 },
-            zoom: 8,
-        });
-        }
+            const myLatLng = { lat: <?php echo $pet_info['pet_lat']?>, lng: <?php echo $pet_info['pet_lng']?>};
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 16,
+                center: myLatLng,
+            });
+
+            new google.maps.Marker({
+                position: myLatLng,
+                map,
+                title: "Hello World!",
+            });
+            }
+
+            window.initMap = initMap;
         var CollectFun ={
+            vaildIsLogin:()=>{
+                if(isLogin == "" | isLogin ==null | isLogin == undefined){
+                    Swal.fire(
+                        '提醒',
+                        "目前您尚未登入，收藏功能將於登入後開啟! 請您登入後繼續。",
+                        'info'
+                    )
+                    return false;
+                }else{
+                    return true;
+                }
+            },
             add:(id)=>{
+                if(!CollectFun.vaildIsLogin()) return;
                 data = new FormData();
                 data.append("pet_id",id);
                 BaseLib.Post("/public/insertCollet",data).then(

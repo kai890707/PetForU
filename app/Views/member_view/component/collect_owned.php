@@ -4,8 +4,8 @@
 </div>    
 
 <div class="p-4 row">
-    <div class="col-12  m-2 p-2" >
-        <div class="row mb-3 p-3 shadow rounded collect_content" >
+    <div class="col-12  m-2 p-2" id="publshList">
+        <!-- <div class="row mb-3 p-3 shadow rounded collect_content" >
             <div class="col-12">
                 <div class="row">
                     <div class="col-8 d-flex align-items-center">
@@ -88,6 +88,6 @@
                 </div>
                 
             </div>
-        </div>
+        </div> -->
     </div>
 </div>

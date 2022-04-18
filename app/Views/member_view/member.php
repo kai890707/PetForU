@@ -34,6 +34,16 @@
                     console.log(err);
                 })
             },
+            getPublishCollect:()=>{
+                BaseLib.Get("/public/selectPublishCollect").then(
+                (res)=>{
+                    // console.log(res);
+                    UserFun.drawPublishCollectList(res);
+                },
+                (err)=>{
+                    console.log(err);
+                })
+            },
             drawUserInfo:(data)=>{
                 if(data.user_gender == "male"){
                     data.user_gender = "男"
@@ -100,6 +110,57 @@
                 });
                 $('#collectList').html(str);
             },
+            drawPublishCollectList:(data)=>{
+                str = '';
+                console.log('data',data);
+                data.forEach(e => {
+                    str += `
+                    <div class="row mb-3 p-3 shadow rounded collect_content" >
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-8 d-flex align-items-center">
+                                    <h4 class="font-weight-bold text-dark text-start m-0">
+                                        <i class="fa fa-paw mr-2"></i>寵物資訊
+                                    </h4>
+                                </div>
+                            
+                            </div>
+                            
+                            
+                            <hr>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12 d-flex justify-content-center">
+                            <img class="img-fluid img-thumbnail" src="${e.published_photo=="無"?BaseLib.base_Url+'/public/assets/img/custom/main.png':e.published_photo}" alt="" width="150px" height="100px">
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-12 text-sm-center mt-sm-2">
+                            <div class="row">
+                                <div class="col-md-3 col-6"><i class="ti-tag mr-2"></i>編號</div>
+                                <div class="col-md-9 col-6 text-md-left">${e.published_id}</div>
+                            </div>
+                            <hr >
+                            <div class="row">
+                                <div class="col-md-3 col-6"><i class="fa fa-venus-mars mr-2" aria-hidden="true"></i>性別</div>
+                                <div class="col-md-9 col-6 text-md-left">${e.published_gender}</div>
+                            </div>
+                            <hr >
+                            <div class="row">
+                                <div class="col-md-3 col-6"><i class="fa fa-info mr-2" aria-hidden="true"></i>體型</div>
+                                <div class="col-md-9 col-6 text-md-left">${e.published_bodytype}</div>
+                            </div>
+                            <hr >
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-12 mt-sm-2 border-left">
+                            <div class="row justify-content-start align-items-center mb-2">
+                                <div class="col mb-2 "><button class="btn btn-outline-info" onclick="UserFun.toPublishInfo(${e.published_id})">查看詳細資訊</button></div>
+                                <div class="col  mb-2 "><button class="btn btn-outline-danger"  onclick="UserFun.removePublishInList(${e.published_id})">結束收藏</button></div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    `;
+                });
+                $('#publshList').html(str);
+            },
             removePetInList:(pet_id)=>{
                 Swal.fire({
                     title: '確定要刪除嗎?',
@@ -108,6 +169,7 @@
                     denyButtonText: `不! 目前不需要`,
                 }).then((result) => {
                     if (result.isConfirmed) {
+                        console.log(1);
                         data = new FormData();
                         data.append("pet_id",pet_id);
                         BaseLib.Post("/public/deleteCollet",data).then(
@@ -126,8 +188,37 @@
                 })
               
             },
+            removePublishInList:(publish_id)=>{
+                Swal.fire({
+                    title: '確定要刪除嗎?',
+                    showDenyButton: true,
+                    confirmButtonText: '是! 我要刪除',
+                    denyButtonText: `不! 目前不需要`,
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        data = new FormData();
+                        data.append("publish_id",publish_id);
+                        BaseLib.Post("/public/deletePublishCollect",data).then(
+                        (res)=>{ 
+                            BaseLib.ResponseCheck(res).then(()=>{
+                                window.location.reload();
+                            })
+                        },
+                        (err)=>{
+                            console.log(err);
+                        })
+                    } else if (result.isDenied) {
+                        Swal.fire('資料尚未刪除', '', 'info')
+                    }
+                   
+                })
+              
+            },
             toPetInfo:(pet_id)=>{
                 window.location = BaseLib.base_Url+'/public/pet/'+pet_id;
+            },
+            toPublishInfo:(publsh_id)=>{
+                window.location = BaseLib.base_Url+'/public/publishSingle/'+publsh_id;
             },
             checkUpdateForm:(data)=>{
                 if(data.get('name_input').length === 0){
@@ -460,6 +551,7 @@
         $(document).ready(()=>{
             UserFun.getUserInfo();
             UserFun.getPetCollect();
+            UserFun.getPublishCollect();
             PetFun.selectPublish();
         })
         $(document).on("click", ".browse", function() {
